@@ -1,12 +1,500 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Card, CardContent } from '@/components/ui/card';
+import Icon from '@/components/ui/icon';
 
 const Index = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert('Спасибо за регистрацию! Мы свяжемся с вами в ближайшее время.');
+  };
+
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-background to-muted py-20 px-4">
+        <div className="container mx-auto max-w-5xl text-center animate-fade-in">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
+            Антисамозванец: как перестать сомневаться в себе и начать действовать
+          </h1>
+          <p className="text-lg md:text-xl text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
+            Двухдневный онлайн-интенсив для психологов, коучей, врачей и других помогающих специалистов, 
+            которые устали чувствовать, что всё время «не дотягивают», и хотят наконец выйти на новый уровень 
+            в профессии и доходе.
+          </p>
+          <Button 
+            size="lg" 
+            className="bg-accent hover:bg-accent/90 text-white font-semibold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
+            onClick={() => scrollToSection('registration')}
+          >
+            Записаться на интенсив
+          </Button>
+        </div>
+      </section>
+
+      {/* Problem Section */}
+      <section id="intro" className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-4xl">
+          <div className="space-y-4 text-lg leading-relaxed">
+            <p className="text-secondary">Вас благодарят клиенты.</p>
+            <p className="text-secondary">Коллеги говорят, что вы классный специалист.</p>
+            <p className="text-secondary">
+              К вам приходят по рекомендации, вы постоянно учитесь, стараетесь, вкладываетесь.
+            </p>
+            <p className="text-secondary">И вроде бы всё хорошо.</p>
+            <p className="text-secondary mt-8">
+              Но внутри всё равно время от времени подкрадывается это чувство — будто вы не до конца настоящий профессионал.
+            </p>
+            <div className="bg-accent/10 border-l-4 border-accent p-6 my-6">
+              <p className="text-primary font-semibold">Как будто просто повезло.</p>
+              <p className="text-primary font-semibold mt-2">
+                Как будто всё держится не на вас, а на удаче или «хороших клиентах».
+              </p>
+            </div>
+            <p className="text-secondary">
+              И когда кто-то говорит: «Вы такой крутой эксперт», внутри что-то сжимается.
+            </p>
+            <p className="text-secondary">
+              Хочется улыбнуться и сказать спасибо, но в голове крутится:
+            </p>
+            <p className="text-accent italic text-xl font-medium text-center my-6">
+              «Это не про меня...»
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Amplification Section */}
+      <section id="amplification" className="py-20 px-4 bg-muted">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+            И что, если с вами всё в порядке?
+          </h2>
+          <div className="space-y-4 text-lg leading-relaxed">
+            <p className="text-secondary">
+              Вы снова редактируете пост о себе, откладываете запуск группы, потому что
+            </p>
+            <p className="text-accent italic font-medium bg-white p-4 rounded-lg shadow-sm">
+              Не поднимаете цену, потому что все клиенты разбегутся, кто будет мне платить такие деньги? 
+              «Решу чуть-чуть и буду готова».
+            </p>
+            <p className="text-secondary">
+              Записываетесь на новое обучение, надеясь, что после него наконец почувствуете уверенность.
+            </p>
+            <p className="text-secondary">
+              Но вместо неё приходит тревога — та самая, которая шепчет:
+            </p>
+            <p className="text-accent italic text-xl font-medium text-center my-6">
+              «Ты ещё не достаточна. Подожди. Потом.»
+            </p>
+            <p className="text-secondary">
+              И внутри появляется тяжёлая усталость. Не от клиентов. Не от работы.
+            </p>
+            <p className="text-accent italic font-medium text-center text-xl mt-6">
+              А от постоянной борьбы с собой...
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Understanding Section */}
+      <section id="understanding" className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+            Почему так?
+          </h2>
+          <div className="space-y-4 text-lg leading-relaxed">
+            <p className="text-secondary">
+              Почти все умные, образованные и честные эксперты через это проходят.
+            </p>
+            <p className="text-secondary">
+              Синдром самозванца — не про слабость.
+            </p>
+            <p className="text-secondary">Это просто показатель того, что вы...</p>
+            <p className="text-accent italic font-medium text-center text-xl my-6">
+              об это как раз интенсив, вы увидите что именно он показывает каждому из нас.
+            </p>
+            <p className="text-secondary">
+              Проблема в том, что когда вы не понимаете, как с ним обращаться,
+            </p>
+            <p className="text-accent font-semibold text-xl text-center my-4">
+              он превращается в тормоз.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Solution Section */}
+      <section id="solution" className="py-20 px-4 bg-gradient-to-b from-accent/5 to-white">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+            А что, если всё иначе?
+          </h2>
+          <div className="space-y-4 text-lg leading-relaxed">
+            <p className="text-secondary">
+              А если синдром самозванца — это не то, что нужно «убить»,
+            </p>
+            <p className="text-secondary">а то, что нужно понять?</p>
+            <p className="text-secondary">
+              Он появляется не потому, что вы плохой специалист,
+            </p>
+            <p className="text-secondary">а потому, что ... это вы узнаете на</p>
+            <p className="text-accent italic font-medium text-center text-xl my-6">интенсиве)</p>
+            <p className="text-secondary">
+              Его невозможно убрать навсегда. Но можно научиться управлять им.
+            </p>
+            <p className="text-secondary">
+              Понимать, когда он говорит правду, а когда просто пугает.
+            </p>
+            <p className="text-secondary">
+              И возвращать себе уверенность — спокойно, без надрыва...
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Target Audience */}
+      <section id="for-whom" className="py-20 px-4 bg-muted">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 text-center">
+            Для кого этот интенсив
+          </h2>
+          <p className="text-xl text-secondary text-center mb-12">
+            Этот формат точно для вас, если вы:
+          </p>
+          <div className="grid gap-6 md:grid-cols-2">
+            {[
+              'бесконечно учитесь, но не чувствуете, что стали увереннее;',
+              'всё знаете, но боитесь заявить о себе, чтобы не показаться «выскочкой»;',
+              'постоянно сравниваете себя с другими и чувствуете, что «всё ещё не готовы»;',
+              'не можете спокойно говорить о своих услугах и чувствуете стыд за деньги;',
+              'устали ждать момента, когда «наконец поверите в себя».'
+            ].map((item, index) => (
+              <Card key={index} className="border-none shadow-md hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 flex items-start gap-4">
+                  <Icon name="CheckCircle" className="text-accent mt-1 flex-shrink-0" size={24} />
+                  <p className="text-secondary">{item}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="bg-accent/10 border-l-4 border-accent p-6 mt-8">
+            <p className="text-primary font-medium">
+              Если внутри вас есть ощущение, что вы способны на большее, но что-то мешает, — вы в правильном месте!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Program */}
+      <section id="program" className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
+            Что будет на интенсиве
+          </h2>
+          <div className="space-y-8">
+            <Card className="border-2 border-accent/20 shadow-lg hover:shadow-xl transition-shadow">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="bg-accent text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl">
+                    1
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary">
+                    Понять, как работает самозванец
+                  </h3>
+                </div>
+                <p className="text-secondary text-lg leading-relaxed">
+                  Мы разберём, с чем люди чаще всего путают синдром самозванца, почему он возникает именно 
+                  у сильных специалистов и почему попытки «побороться» с ним обычно только усиливают внутренний 
+                  конфликт. Вы познакомитесь с авторской моделью работы с самозванцем — подходом, который помогает 
+                  не бороться, а вернуть внутреннюю опору.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-accent/20 shadow-lg hover:shadow-xl transition-shadow">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="bg-accent text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl">
+                    2
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary">
+                    Вернуться в уверенность и начать действовать
+                  </h3>
+                </div>
+                <p className="text-secondary text-lg leading-relaxed">
+                  Этот день — про вас настоящего. Про уверенность, которая не зависит от лайков, одобрения или 
+                  внешних результатов. Про то, как действовать спокойно, без надрыва и тревоги. Вторая часть — 
+                  ответы на вопросы, домашние задания и живые разборы ситуаций участников.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Results */}
+      <section id="results" className="py-20 px-4 bg-gradient-to-b from-accent/5 to-muted">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
+            После интенсива вы сможете:
+          </h2>
+          <div className="grid gap-6">
+            {[
+              'Понять, почему вы чувствовали себя «недостаточно» — и перестанете винить себя',
+              'Узнать, как быстро вернуть внутреннюю опору, когда сомнения накрывают',
+              'Почувствовать уверенность без надуманной мотивации',
+              'Спокойно говорить о своих услугах и поднимать цену без страха'
+            ].map((item, index) => (
+              <Card key={index} className="border-none shadow-md">
+                <CardContent className="p-6 flex items-start gap-4">
+                  <span className="text-3xl">✅</span>
+                  <p className="text-secondary text-lg">{item}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Effective */}
+      <section id="why-effective" className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
+            👍 Почему этот формат эффективный
+          </h2>
+          <div className="space-y-6">
+            {[
+              'Здесь не будет мотивации на эмоциях. Только реальные механизмы, которые работают.',
+              'Не будет борьбы с собой — вы научитесь видеть, где уверенность теряется, и возвращать её.',
+              'Это не «про уверенность вообще» — это про то, как чувствовать себя на своём месте.',
+              'После этих двух дней вы перестанете «ждать, когда будете готовы» — и начнёте действовать.'
+            ].map((item, index) => (
+              <div key={index} className="flex items-start gap-4 bg-muted p-6 rounded-lg">
+                <Icon name="Star" className="text-accent mt-1 flex-shrink-0" size={24} />
+                <p className="text-secondary text-lg">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Turning Point */}
+      <section id="turning-point" className="py-20 px-4 bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
+            ✨ Возможно, именно эти два дня станут для вас поворотной точкой
+          </h2>
+          <div className="space-y-4 text-lg text-secondary">
+            <p>Вы больше не будете сравнивать себя с другими.</p>
+            <p>Не будете бояться ошибиться или показаться «слишком».</p>
+            <p className="text-xl font-semibold text-primary">
+              Вы начнёте действовать — спокойно, уверенно и по-настоящему.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Authors */}
+      <section id="authors" className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
+            🧑‍🏫 Авторы и ведущие
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <Card className="border-2 border-accent/20 shadow-lg">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-primary mb-2">Инна Сорока</h3>
+                <p className="text-accent font-semibold mb-4">клинический психолог, супервизор</p>
+                <p className="text-secondary">
+                  помогает экспертам вернуть уверенность и устойчивость в профессии.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-accent/20 shadow-lg">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-primary mb-2">Марина Шулягина</h3>
+                <p className="text-accent font-semibold mb-4">маркетолог</p>
+                <p className="text-secondary">
+                  помогающий психологам строить систему клиентов и расти без выгорания.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="bg-muted border-none">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold text-primary mb-4">«Психология как бизнес»</h3>
+              <p className="text-secondary text-lg mb-4">
+                пространство, где специалисты учатся не просто помогать людям, а строить устойчивую систему 
+                дохода на том, что умеют и любят.
+              </p>
+              <p className="text-secondary">
+                Сотни экспертов уже прошли наши программы: повысили доход, увеличили поток клиентов, нашли своё 
+                позиционирование и перестали бояться быть видимыми.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Details */}
+      <section id="details" className="py-20 px-4 bg-muted">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
+            Формат и стоимость
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <Card className="border-2 border-accent/20 shadow-lg">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon name="Calendar" className="text-accent" size={32} />
+                  <div>
+                    <p className="text-sm text-secondary">Даты проведения</p>
+                    <p className="text-xl font-bold text-primary">17 и 20 октября</p>
+                    <p className="text-secondary">в 19.00 мск</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon name="Clock" className="text-accent" size={32} />
+                  <div>
+                    <p className="text-sm text-secondary">Длительность</p>
+                    <p className="text-xl font-bold text-primary">2 дня по 3 часа</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Icon name="Globe" className="text-accent" size={32} />
+                  <div>
+                    <p className="text-sm text-secondary">Формат</p>
+                    <p className="text-xl font-bold text-primary">Онлайн</p>
+                    <p className="text-secondary">с записями и чат поддержки</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-accent bg-gradient-to-br from-accent to-accent/80 text-white shadow-xl">
+              <CardContent className="p-8 flex flex-col items-center justify-center h-full">
+                <p className="text-lg mb-2">Стоимость участия</p>
+                <p className="text-5xl font-bold mb-2">5 800 ₽</p>
+                <p className="text-center opacity-90">полный доступ к материалам</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="bg-white border-2 border-accent/20">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold text-primary mb-6">🎁 Бонусы для участников:</h3>
+              <div className="space-y-3">
+                {[
+                  'Тетрадь с практиками и упражнениями «Антисамозванец»',
+                  'Чек-лист «Мои опоры»',
+                  'Аудиопрактика «Возвращение в состояние спокойной уверенности»'
+                ].map((bonus, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <Icon name="Gift" className="text-accent" size={24} />
+                    <p className="text-secondary text-lg">{bonus}</p>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Registration Form */}
+      <section id="registration" className="py-20 px-4 bg-gradient-to-b from-white to-accent/10">
+        <div className="container mx-auto max-w-2xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+            Записаться на интенсив «Антисамозванец»
+          </h2>
+          <Card className="shadow-2xl border-2 border-accent/20">
+            <CardContent className="p-8">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium text-secondary mb-2">
+                    Ваше имя *
+                  </label>
+                  <Input
+                    type="text"
+                    placeholder="Введите ваше имя"
+                    required
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="text-lg"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-secondary mb-2">
+                    Email *
+                  </label>
+                  <Input
+                    type="email"
+                    placeholder="example@mail.com"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="text-lg"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-secondary mb-2">
+                    Телефон *
+                  </label>
+                  <Input
+                    type="tel"
+                    placeholder="+7 (999) 999-99-99"
+                    required
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="text-lg"
+                  />
+                </div>
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full bg-accent hover:bg-accent/90 text-white font-semibold text-lg py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
+                >
+                  Записаться на интенсив
+                </Button>
+              </form>
+              <p className="text-sm text-secondary text-center mt-6">
+                если у вас остались вопросы, или хотите оплатить из-за рубежа, пишите{' '}
+                <a href="tel:+79149324628" className="text-accent font-semibold hover:underline">
+                  +79149324628
+                </a>{' '}
+                менеджер Инна.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-primary text-white py-12 px-4">
+        <div className="container mx-auto max-w-4xl text-center">
+          <p className="mb-4">
+            Вопросы? Свяжитесь с нами:{' '}
+            <a href="tel:+79149324628" className="text-accent font-semibold hover:underline">
+              +79149324628
+            </a>{' '}
+            (менеджер Инна)
+          </p>
+          <p className="text-sm opacity-80">© 2025 Психология как бизнес</p>
+        </div>
+      </footer>
     </div>
   );
 };
