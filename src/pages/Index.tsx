@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
@@ -11,6 +11,51 @@ const Index = () => {
     phone: ''
   });
 
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    const targetDate = new Date('2025-10-17T19:00:00+03:00').getTime();
+
+    const updateTimer = () => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance > 0) {
+        setTimeLeft({
+          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000)
+        });
+      }
+    };
+
+    updateTimer();
+    const interval = setInterval(updateTimer, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert('Спасибо за регистрацию! Мы свяжемся с вами в ближайшее время.');
@@ -22,6 +67,41 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Countdown Timer */}
+      <div className="bg-accent text-white py-4 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+            <p className="text-lg font-semibold">До начала интенсива осталось:</p>
+            <div className="flex gap-3 md:gap-6">
+              <div className="text-center">
+                <div className="bg-white/20 rounded-lg px-4 py-2 min-w-[70px]">
+                  <p className="text-3xl font-bold">{timeLeft.days}</p>
+                  <p className="text-xs opacity-90">дней</p>
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="bg-white/20 rounded-lg px-4 py-2 min-w-[70px]">
+                  <p className="text-3xl font-bold">{timeLeft.hours}</p>
+                  <p className="text-xs opacity-90">часов</p>
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="bg-white/20 rounded-lg px-4 py-2 min-w-[70px]">
+                  <p className="text-3xl font-bold">{timeLeft.minutes}</p>
+                  <p className="text-xs opacity-90">минут</p>
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="bg-white/20 rounded-lg px-4 py-2 min-w-[70px]">
+                  <p className="text-3xl font-bold">{timeLeft.seconds}</p>
+                  <p className="text-xs opacity-90">секунд</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-background to-muted py-20 px-4">
         <div className="container mx-auto max-w-5xl text-center animate-fade-in">
@@ -44,7 +124,7 @@ const Index = () => {
       </section>
 
       {/* Problem Section */}
-      <section id="intro" className="py-20 px-4 bg-white">
+      <section id="intro" className="py-20 px-4 bg-white scroll-reveal">
         <div className="container mx-auto max-w-4xl">
           <div className="space-y-4 text-lg leading-relaxed">
             <p className="text-secondary">Вас благодарят клиенты.</p>
@@ -76,7 +156,7 @@ const Index = () => {
       </section>
 
       {/* Amplification Section */}
-      <section id="amplification" className="py-20 px-4 bg-muted">
+      <section id="amplification" className="py-20 px-4 bg-muted scroll-reveal">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
             И что, если с вами всё в порядке?
@@ -109,7 +189,7 @@ const Index = () => {
       </section>
 
       {/* Understanding Section */}
-      <section id="understanding" className="py-20 px-4 bg-white">
+      <section id="understanding" className="py-20 px-4 bg-white scroll-reveal">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
             Почему так?
@@ -136,7 +216,7 @@ const Index = () => {
       </section>
 
       {/* Solution Section */}
-      <section id="solution" className="py-20 px-4 bg-gradient-to-b from-accent/5 to-white">
+      <section id="solution" className="py-20 px-4 bg-gradient-to-b from-accent/5 to-white scroll-reveal">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
             А что, если всё иначе?
@@ -165,7 +245,7 @@ const Index = () => {
       </section>
 
       {/* Target Audience */}
-      <section id="for-whom" className="py-20 px-4 bg-muted">
+      <section id="for-whom" className="py-20 px-4 bg-muted scroll-reveal">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 text-center">
             Для кого этот интенсив
@@ -198,7 +278,7 @@ const Index = () => {
       </section>
 
       {/* Program */}
-      <section id="program" className="py-20 px-4 bg-white">
+      <section id="program" className="py-20 px-4 bg-white scroll-reveal">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
             Что будет на интенсиве
@@ -245,7 +325,7 @@ const Index = () => {
       </section>
 
       {/* Results */}
-      <section id="results" className="py-20 px-4 bg-gradient-to-b from-accent/5 to-muted">
+      <section id="results" className="py-20 px-4 bg-gradient-to-b from-accent/5 to-muted scroll-reveal">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
             После интенсива вы сможете:
@@ -268,8 +348,73 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-20 px-4 bg-gradient-to-b from-white to-muted scroll-reveal">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 text-center">
+            Что говорят участники
+          </h2>
+          <p className="text-secondary text-center mb-12 text-lg">Реальные истории специалистов, которые уже прошли путь</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="border-2 border-accent/10 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center text-2xl font-bold text-accent">
+                    ЕМ
+                  </div>
+                  <div>
+                    <p className="font-bold text-primary text-lg">Елена М.</p>
+                    <p className="text-sm text-secondary">психолог, 7 лет опыта</p>
+                  </div>
+                </div>
+                <p className="text-secondary italic mb-4">"Я поняла, что самозванец — это не про мою некомпетентность, а про то, что я растёт. Теперь я спокойно повысила цену консультации в 2 раза и клиенты остались."</p>
+                <div className="flex gap-1">
+                  {[1,2,3,4,5].map(i => <Icon key={i} name="Star" className="text-accent fill-accent" size={16} />)}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-accent/10 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center text-2xl font-bold text-accent">
+                    АК
+                  </div>
+                  <div>
+                    <p className="font-bold text-primary text-lg">Анна К.</p>
+                    <p className="text-sm text-secondary">коуч, 4 года опыта</p>
+                  </div>
+                </div>
+                <p className="text-secondary italic mb-4">"После интенсива я перестала сравнивать себя с коллегами и наконец запустила свою групповую программу. Набрала 15 человек за неделю!"</p>
+                <div className="flex gap-1">
+                  {[1,2,3,4,5].map(i => <Icon key={i} name="Star" className="text-accent fill-accent" size={16} />)}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-accent/10 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center text-2xl font-bold text-accent">
+                    ДС
+                  </div>
+                  <div>
+                    <p className="font-bold text-primary text-lg">Дмитрий С.</p>
+                    <p className="text-sm text-secondary">психотерапевт, 10 лет</p>
+                  </div>
+                </div>
+                <p className="text-secondary italic mb-4">"Я думал, что синдром самозванца — это навсегда. Но Инна показала, как превратить его в ресурс. Теперь я веду супервизии и чувствую себя на своём месте."</p>
+                <div className="flex gap-1">
+                  {[1,2,3,4,5].map(i => <Icon key={i} name="Star" className="text-accent fill-accent" size={16} />)}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Why Effective */}
-      <section id="why-effective" className="py-20 px-4 bg-white">
+      <section id="why-effective" className="py-20 px-4 bg-white scroll-reveal">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
             👍 Почему этот формат эффективный
@@ -291,7 +436,7 @@ const Index = () => {
       </section>
 
       {/* Turning Point */}
-      <section id="turning-point" className="py-20 px-4 bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10">
+      <section id="turning-point" className="py-20 px-4 bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10 scroll-reveal">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
             ✨ Возможно, именно эти два дня станут для вас поворотной точкой
@@ -307,7 +452,7 @@ const Index = () => {
       </section>
 
       {/* Authors */}
-      <section id="authors" className="py-20 px-4 bg-white">
+      <section id="authors" className="py-20 px-4 bg-white scroll-reveal">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
             🧑‍🏫 Авторы и ведущие
@@ -351,7 +496,7 @@ const Index = () => {
       </section>
 
       {/* Details */}
-      <section id="details" className="py-20 px-4 bg-muted">
+      <section id="details" className="py-20 px-4 bg-muted scroll-reveal">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
             Формат и стоимость
@@ -415,7 +560,7 @@ const Index = () => {
       </section>
 
       {/* Registration Form */}
-      <section id="registration" className="py-20 px-4 bg-gradient-to-b from-white to-accent/10">
+      <section id="registration" className="py-20 px-4 bg-gradient-to-b from-white to-accent/10 scroll-reveal">
         <div className="container mx-auto max-w-2xl">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
             Записаться на интенсив «Антисамозванец»
