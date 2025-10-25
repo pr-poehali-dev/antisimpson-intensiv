@@ -115,38 +115,38 @@ const Index = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="py-12 md:py-20 px-4 bg-gradient-to-b from-background to-muted relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+      <section className="py-8 md:py-20 px-4 bg-gradient-to-b from-background to-muted relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 hidden md:block">
           <div className="absolute top-20 left-10 w-72 h-72 bg-accent/30 rounded-full blur-3xl animate-float"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
         </div>
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
             <div className="animate-fade-in order-2 md:order-1">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
+              <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 md:mb-6 leading-tight">
                 Антисамозванец: как перестать сомневаться в себе и начать действовать
               </h1>
-              <p className="text-base md:text-xl text-secondary mb-8 leading-relaxed">
+              <p className="text-sm md:text-xl text-secondary mb-6 md:mb-8 leading-relaxed">
                 Онлайн-интенсив для помогающих специалистов, которые устали чувствовать, что всё время "не дотягивают", и хотят наконец выйти на новый уровень в профессии и доходе.
               </p>
               <Button 
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-white font-semibold text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full shadow-lg hover:shadow-xl transition-all w-full md:w-auto"
+                className="bg-accent hover:bg-accent/90 text-white font-semibold text-sm md:text-lg px-6 md:px-8 py-4 md:py-6 rounded-full shadow-lg hover:shadow-xl transition-all w-full md:w-auto"
                 onClick={() => scrollToSection('registration')}
               >
                 Записаться на интенсив
               </Button>
             </div>
 
-            <div className="relative animate-fade-in order-1 md:order-2">
+            <div className="relative animate-fade-in order-1 md:order-2 mb-4 md:mb-0">
               <div 
-                className="relative overflow-hidden rounded-2xl shadow-2xl transition-transform duration-100 will-change-transform" 
+                className="relative overflow-hidden rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl transition-transform duration-100 will-change-transform" 
                 style={{ transform: `translateY(${-parallaxOffset * 0.15}px) scale(${1 + parallaxOffset * 0.00005})` }}
               >
                 <img 
                   src="https://cdn.poehali.dev/files/6eff48de-9aa2-42ca-a633-a2ac128405c7.png" 
                   alt="Ксения Леонова"
-                  className="w-full h-auto object-cover transition-all duration-500 ease-out hover:scale-110"
+                  className="w-full h-auto object-cover transition-all duration-500 ease-out md:hover:scale-110"
                 />
               </div>
             </div>
@@ -155,9 +155,9 @@ const Index = () => {
       </section>
 
       {/* Problem Section */}
-      <section id="intro" className="py-12 md:py-20 px-4 bg-white scroll-reveal">
+      <section id="intro" className="py-8 md:py-20 px-4 bg-white scroll-reveal">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
             <div className="space-y-4 text-lg leading-relaxed">
               <p className="text-secondary">Вас благодарят клиенты.</p>
               <p className="text-secondary">Коллеги говорят, что вы классный специалист.</p>
@@ -168,7 +168,7 @@ const Index = () => {
               <p className="text-secondary mt-8">
                 Но внутри всё равно время от времени подкрадывается это чувство - будто вы не до конца настоящий профессионал.
               </p>
-              <div className="bg-accent/10 border-l-4 border-accent p-6 my-6">
+              <div className="bg-accent/10 border-l-4 border-accent p-4 md:p-6 my-4 md:my-6">
                 <p className="text-primary font-semibold">Как будто просто повезло.</p>
                 <p className="text-primary font-semibold mt-2">
                   Как будто всё держится не на вас, а на удаче или хороших клиентах.
@@ -187,19 +187,19 @@ const Index = () => {
               <div className="mt-8 text-center">
                 <Button 
                   size="lg" 
-                  className="bg-accent hover:bg-accent/90 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 animate-pulse w-full md:w-auto"
+                  className="bg-accent hover:bg-accent/90 text-white font-bold text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 animate-pulse w-full md:w-auto"
                   onClick={() => scrollToSection('registration')}
                 >
-                  Хватит сомневаться - запишитесь сейчас!
+                  Записаться сейчас
                 </Button>
               </div>
             </div>
             
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               <img 
                 src="https://cdn.poehali.dev/files/e87e9311-4201-47ce-9e54-a513908bf9de.png" 
                 alt="Профессиональный успех"
-                className="w-full rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+                className="w-full rounded-lg shadow-lg transition-all duration-500 md:hover:scale-105 md:hover:shadow-2xl"
               />
               <img 
                 src="https://cdn.poehali.dev/files/14faf318-1cd2-40b3-a5a3-0d7e0175bebe.png" 
@@ -212,26 +212,26 @@ const Index = () => {
       </section>
 
       {/* Amplification Section */}
-      <section id="amplification" className="py-12 md:py-20 px-4 bg-muted scroll-reveal">
+      <section id="amplification" className="py-8 md:py-20 px-4 bg-muted scroll-reveal">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
+          <h2 className="text-2xl md:text-4xl font-bold text-primary mb-6 md:mb-12 text-center">
             И что, если с вами всё в порядке?
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
             <div className="order-2 md:order-1">
               <img 
                 src="https://cdn.poehali.dev/files/3a0b53bd-3034-466a-b25f-32aab2f30724.jpg" 
                 alt="Профессиональный эксперт"
-                className="w-full rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+                className="w-full rounded-lg shadow-lg transition-all duration-500 md:hover:scale-105 md:hover:shadow-2xl"
               />
             </div>
             
-            <div className="space-y-4 text-base md:text-lg leading-relaxed order-1 md:order-2">
+            <div className="space-y-3 md:space-y-4 text-sm md:text-lg leading-relaxed order-1 md:order-2">
               <p className="text-secondary">
                 Вы снова редактируете пост о себе, откладываете запуск группы, потому что
               </p>
-              <p className="text-accent italic font-medium bg-white p-4 rounded-lg shadow-sm text-sm md:text-base">
+              <p className="text-accent italic font-medium bg-white p-3 md:p-4 rounded-lg shadow-sm text-xs md:text-base">
                 Не поднимаете цену, потому что все клиенты разбегутся, кто будет мне платить такие деньги? Решу чуть-чуть и буду готова.
               </p>
               <p className="text-secondary">
@@ -240,23 +240,23 @@ const Index = () => {
               <p className="text-secondary">
                 Но вместо неё приходит тревога - та самая, которая шепчет:
               </p>
-              <p className="text-accent italic text-lg md:text-xl font-medium text-center my-6">
+              <p className="text-accent italic text-sm md:text-xl font-medium text-center my-3 md:my-6">
                 Ты ещё не достаточна. Подожди. Потом.
               </p>
               <p className="text-secondary">
                 И внутри появляется тяжёлая усталость. Не от клиентов. Не от работы.
               </p>
-              <p className="text-accent italic font-medium text-center text-lg md:text-xl mt-6">
+              <p className="text-accent italic font-medium text-center text-sm md:text-xl mt-4 md:mt-6">
                 А от постоянной борьбы с собой...
               </p>
               
-              <div className="mt-8 text-center">
+              <div className="mt-6 md:mt-8 text-center">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-accent to-accent/80 hover:from-accent/90 hover:to-accent/70 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 w-full md:w-auto"
+                  className="bg-gradient-to-r from-accent to-accent/80 hover:from-accent/90 hover:to-accent/70 text-white font-bold text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 w-full md:w-auto"
                   onClick={() => scrollToSection('registration')}
                 >
-                  Пора остановить эту борьбу ⚡
+                  Остановить борьбу
                 </Button>
               </div>
             </div>
@@ -265,14 +265,14 @@ const Index = () => {
       </section>
 
       {/* Understanding Section */}
-      <section id="understanding" className="py-12 md:py-20 px-4 bg-white scroll-reveal">
+      <section id="understanding" className="py-8 md:py-20 px-4 bg-white scroll-reveal">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
+          <h2 className="text-2xl md:text-4xl font-bold text-primary mb-6 md:mb-12 text-center">
             Почему так?
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-4 text-base md:text-lg leading-relaxed">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
+            <div className="space-y-3 md:space-y-4 text-sm md:text-lg leading-relaxed">
               <p className="text-secondary">
                 Почти все умные, образованные и честные эксперты через это проходят.
               </p>
@@ -280,23 +280,23 @@ const Index = () => {
                 Синдром самозванца - не про слабость.
               </p>
               <p className="text-secondary">Это просто показатель того, что вы...</p>
-              <p className="text-accent italic font-medium text-center text-lg md:text-xl my-6">
+              <p className="text-accent italic font-medium text-center text-sm md:text-xl my-3 md:my-6">
                 об это как раз интенсив, вы увидите что именно он показывает каждому из нас.
               </p>
               <p className="text-secondary">
                 Проблема в том, что когда вы не понимаете, как с ним обращаться,
               </p>
-              <p className="text-accent font-semibold text-lg md:text-xl text-center my-4">
+              <p className="text-accent font-semibold text-sm md:text-xl text-center my-3 md:my-4">
                 он превращается в тормоз.
               </p>
               
               <div className="mt-8 text-center">
                 <Button 
                   size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 w-full md:w-auto"
+                  className="bg-primary hover:bg-primary/90 text-white font-bold text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 w-full md:w-auto"
                   onClick={() => scrollToSection('registration')}
                 >
-                  Узнать, как это исправить 🔥
+                  Узнать больше
                 </Button>
               </div>
             </div>
@@ -305,7 +305,7 @@ const Index = () => {
               <img 
                 src="https://cdn.poehali.dev/files/2912cd2e-5715-497f-a70e-57e6db3ef98a.jpg" 
                 alt="Синдром самозванца vs Реальность"
-                className="w-full rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+                className="w-full rounded-lg shadow-lg transition-all duration-500 md:hover:scale-105 md:hover:shadow-2xl"
               />
             </div>
           </div>
@@ -313,18 +313,18 @@ const Index = () => {
       </section>
 
       {/* Solution Section */}
-      <section id="solution" className="py-12 md:py-20 px-4 bg-gradient-to-b from-accent/5 to-white scroll-reveal">
+      <section id="solution" className="py-8 md:py-20 px-4 bg-gradient-to-b from-accent/5 to-white scroll-reveal">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
+          <h2 className="text-2xl md:text-4xl font-bold text-primary mb-6 md:mb-12 text-center">
             А что, если всё иначе?
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="order-2 md:order-1 space-y-6">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
+            <div className="order-2 md:order-1 space-y-4 md:space-y-6">
               <img 
                 src="https://cdn.poehali.dev/files/cfbfbeb4-2b90-423e-a214-c29044fed484.jpg" 
                 alt="О синдроме самозванца"
-                className="w-full rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+                className="w-full rounded-lg shadow-lg transition-all duration-500 md:hover:scale-105 md:hover:shadow-2xl"
               />
               <img 
                 src="https://cdn.poehali.dev/files/c32eddd7-b598-4255-a78b-d2069594cacb.jpg" 
@@ -333,7 +333,7 @@ const Index = () => {
               />
             </div>
             
-            <div className="space-y-4 text-base md:text-lg leading-relaxed order-1 md:order-2">
+            <div className="space-y-3 md:space-y-4 text-sm md:text-lg leading-relaxed order-1 md:order-2">
               <p className="text-secondary">
                 А если синдром самозванца - это не то, что нужно убить,
               </p>
@@ -342,7 +342,7 @@ const Index = () => {
                 Он появляется не потому, что вы плохой специалист,
               </p>
               <p className="text-secondary">а потому, что ... это вы узнаете на</p>
-              <p className="text-accent italic font-medium text-center text-lg md:text-xl my-6">интенсиве)</p>
+              <p className="text-accent italic font-medium text-center text-sm md:text-xl my-3 md:my-6">интенсиве)</p>
               <p className="text-secondary">
                 Его невозможно убрать навсегда. Но можно научиться управлять им.
               </p>
@@ -353,13 +353,13 @@ const Index = () => {
                 И возвращать себе уверенность - спокойно, без надрыва...
               </p>
               
-              <div className="mt-8 text-center">
+              <div className="mt-6 md:mt-8 text-center">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 w-full md:w-auto"
+                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 w-full md:w-auto"
                   onClick={() => scrollToSection('registration')}
                 >
-                  Я готов узнать больше! ✨
+                  Узнать больше
                 </Button>
               </div>
             </div>
@@ -368,7 +368,7 @@ const Index = () => {
       </section>
 
       {/* Registration Section */}
-      <section id="registration" className="py-12 md:py-20 px-4 bg-accent/5 scroll-reveal">
+      <section id="registration" className="py-8 md:py-20 px-4 bg-accent/5 scroll-reveal">
         <div className="container mx-auto max-w-2xl">
           <h2 className="text-2xl md:text-4xl font-bold text-primary mb-4 text-center">
             Запишитесь на интенсив
