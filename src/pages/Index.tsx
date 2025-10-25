@@ -472,21 +472,21 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="hidden lg:block space-y-4">
+            <div className="space-y-4">
               <img 
                 src="https://cdn.poehali.dev/files/13b37e71-149e-4a1c-a03c-72478b4b7ed9.png" 
                 alt="Освобождение от цепей"
-                className="w-full rounded-lg shadow-2xl transform hover:scale-105 transition-all duration-500"
+                className="w-full rounded-lg shadow-2xl md:hover:scale-105 transition-all duration-500"
               />
               <img 
                 src="https://cdn.poehali.dev/files/f426919e-b204-4373-bf2f-dccf7612ce41.png" 
                 alt="Обретение силы"
-                className="w-full rounded-lg shadow-2xl transform hover:scale-105 transition-all duration-500"
+                className="w-full rounded-lg shadow-2xl hidden lg:block md:hover:scale-105 transition-all duration-500"
               />
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative mt-8 md:mt-12">
             <div className="absolute inset-0 bg-gradient-to-r from-accent/5 via-primary/5 to-accent/5 blur-3xl"></div>
             <div className="relative bg-white/80 backdrop-blur-sm border-2 border-accent/30 p-4 md:p-8 rounded-2xl shadow-2xl">
               <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-center">
@@ -509,11 +509,11 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <div className="hidden lg:block">
+                <div>
                   <img 
                     src="https://cdn.poehali.dev/files/180d0101-7310-4182-b1aa-441f1999d439.png" 
                     alt="Трансформация и освобождение"
-                    className="w-full rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500"
+                    className="w-full rounded-2xl shadow-2xl md:hover:scale-105 transition-all duration-500"
                   />
                 </div>
               </div>
