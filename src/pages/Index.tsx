@@ -139,11 +139,14 @@ const Index = () => {
             </div>
 
             <div className="relative animate-fade-in order-1 md:order-2">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl" style={{ transform: `translateY(${-parallaxOffset * 0.2}px)` }}>
+              <div 
+                className="relative overflow-hidden rounded-2xl shadow-2xl transition-transform duration-100 will-change-transform" 
+                style={{ transform: `translateY(${-parallaxOffset * 0.15}px) scale(${1 + parallaxOffset * 0.00005})` }}
+              >
                 <img 
                   src="https://cdn.poehali.dev/files/6eff48de-9aa2-42ca-a633-a2ac128405c7.png" 
                   alt="Ксения Леонова"
-                  className="w-full h-auto object-cover transition-transform duration-700 hover:scale-110"
+                  className="w-full h-auto object-cover transition-all duration-500 ease-out hover:scale-110"
                 />
               </div>
             </div>
