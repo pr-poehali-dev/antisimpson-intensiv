@@ -320,7 +320,12 @@ const Index = () => {
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="order-2 md:order-1">
+            <div className="order-2 md:order-1 space-y-6">
+              <img 
+                src="https://cdn.poehali.dev/files/cfbfbeb4-2b90-423e-a214-c29044fed484.jpg" 
+                alt="О синдроме самозванца"
+                className="w-full rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+              />
               <img 
                 src="https://cdn.poehali.dev/files/c32eddd7-b598-4255-a78b-d2069594cacb.jpg" 
                 alt="Ты говоришь что у меня синдром самозванца"
