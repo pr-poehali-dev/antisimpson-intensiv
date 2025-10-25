@@ -141,7 +141,7 @@ const Index = () => {
               >
                 <img 
                   src="https://cdn.poehali.dev/files/6eff48de-9aa2-42ca-a633-a2ac128405c7.png" 
-                  alt="Ксения Леонова"
+                  alt="Николаева Екатерина"
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -447,13 +447,13 @@ const Index = () => {
             <div>
               <img 
                 src="https://cdn.poehali.dev/files/6eff48de-9aa2-42ca-a633-a2ac128405c7.png" 
-                alt="Ксения Леонова"
+                alt="Николаева Екатерина"
                 className="w-full rounded"
               />
             </div>
             
             <div className="space-y-6">
-              <h3 className="text-2xl md:text-3xl font-normal text-primary">Ксения Леонова</h3>
+              <h3 className="text-2xl md:text-3xl font-normal text-primary">Николаева Екатерина</h3>
               <p className="text-base md:text-lg font-light text-secondary leading-relaxed">
                 Психолог, коуч, супервизор. Работаю с помогающими специалистами уже более 10 лет.
               </p>
@@ -609,7 +609,7 @@ const Index = () => {
       <footer className="py-12 px-6 bg-muted border-t border-border">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center space-y-4">
-            <p className="text-sm font-light text-secondary">© 2025 Ксения Леонова. Все права защищены.</p>
+            <p className="text-sm font-light text-secondary">© 2025 Николаева Екатерина. Все права защищены.</p>
             <div className="flex justify-center gap-6">
               <a href="#" className="text-sm font-light text-secondary hover:text-accent transition-colors">
                 Политика конфиденциальности
