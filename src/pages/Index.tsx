@@ -21,7 +21,7 @@ const Index = () => {
   const [parallaxOffset, setParallaxOffset] = useState(0);
 
   useEffect(() => {
-    const targetDate = new Date('2025-10-17T19:00:00+03:00').getTime();
+    const targetDate = new Date('2025-11-11T19:00:00+03:00').getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();
@@ -562,7 +562,7 @@ const Index = () => {
                     <Icon name="Calendar" className="text-accent flex-shrink-0 mt-1" size={20} />
                     <div>
                       <p className="font-semibold text-sm md:text-base text-primary">Даты</p>
-                      <p className="text-sm md:text-base text-secondary">17 и 20 октября в 19:00 мск</p>
+                      <p className="text-sm md:text-base text-secondary">11 и 14 ноября в 19:00 мск</p>
                     </div>
                   </div>
                   <div className="flex gap-3 items-start">
