@@ -451,6 +451,25 @@ const Index = () => {
                   </p>
                 </CardContent>
               </Card>
+
+              <div className="bg-gradient-to-br from-accent/20 via-accent/10 to-transparent border-2 border-accent/40 rounded-2xl p-4 md:p-6 shadow-2xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-3 md:mb-4">
+                    <Icon name="Gift" className="text-accent" size={32} />
+                    <h3 className="text-xl md:text-2xl font-bold text-primary">+ Бонус для участников</h3>
+                  </div>
+                  <p className="text-sm md:text-lg text-secondary leading-relaxed mb-3 md:mb-4">
+                    Всем участникам интенсива — доступ к закрытому чату поддержки на 30 дней. Вы сможете задавать вопросы, получать помощь и поддержку от экспертов и других участников в процессе применения практик в реальной жизни.
+                  </p>
+                  <div className="bg-white/80 backdrop-blur-sm rounded-lg p-3 md:p-4 border-l-4 border-accent">
+                    <p className="text-accent font-bold text-sm md:text-base">
+                      Это не просто знания — это реальная поддержка на пути к уверенности!
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="hidden lg:block space-y-4">
