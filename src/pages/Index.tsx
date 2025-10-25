@@ -141,7 +141,7 @@ const Index = () => {
             <div className="relative animate-fade-in order-1 md:order-2 group">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:rotate-1">
                 <img 
-                  src="https://cdn.poehali.dev/files/b5c4ed63-ee00-451a-ad8f-9a1fc18e9d97.jpg" 
+                  src="https://cdn.poehali.dev/files/6eff48de-9aa2-42ca-a633-a2ac128405c7.png" 
                   alt="Ксения Леонова"
                   className="w-full h-auto object-cover"
                 />
