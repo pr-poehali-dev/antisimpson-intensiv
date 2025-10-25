@@ -61,7 +61,7 @@ const Index = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
-      setParallaxOffset(scrolled * 0.5);
+      setParallaxOffset(scrolled);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -139,7 +139,7 @@ const Index = () => {
             </div>
 
             <div className="relative animate-fade-in order-1 md:order-2">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl" style={{ transform: `translateY(${parallaxOffset * 0.3}px)` }}>
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl" style={{ transform: `translateY(${-parallaxOffset * 0.2}px)` }}>
                 <img 
                   src="https://cdn.poehali.dev/files/6eff48de-9aa2-42ca-a633-a2ac128405c7.png" 
                   alt="Ксения Леонова"
