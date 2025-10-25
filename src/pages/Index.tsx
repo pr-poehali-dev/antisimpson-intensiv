@@ -190,6 +190,14 @@ const Index = () => {
             <p className="text-accent italic text-xl font-medium text-center my-6">
               «Это не про меня...»
             </p>
+            
+            <div className="mt-8">
+              <img 
+                src="https://cdn.poehali.dev/files/14faf318-1cd2-40b3-a5a3-0d7e0175bebe.png" 
+                alt="Сомнительно, но окей"
+                className="w-full max-w-2xl mx-auto rounded-lg shadow-md"
+              />
+            </div>
           </div>
         </div>
       </section>
