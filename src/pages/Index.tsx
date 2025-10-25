@@ -294,29 +294,42 @@ const Index = () => {
 
       {/* Solution Section */}
       <section id="solution" className="py-20 px-4 bg-gradient-to-b from-accent/5 to-white scroll-reveal">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
             А что, если всё иначе?
           </h2>
-          <div className="space-y-4 text-lg leading-relaxed">
-            <p className="text-secondary">
-              А если синдром самозванца — это не то, что нужно «убить»,
-            </p>
-            <p className="text-secondary">а то, что нужно понять?</p>
-            <p className="text-secondary">
-              Он появляется не потому, что вы плохой специалист,
-            </p>
-            <p className="text-secondary">а потому, что ... это вы узнаете на</p>
-            <p className="text-accent italic font-medium text-center text-xl my-6">интенсиве)</p>
-            <p className="text-secondary">
-              Его невозможно убрать навсегда. Но можно научиться управлять им.
-            </p>
-            <p className="text-secondary">
-              Понимать, когда он говорит правду, а когда просто пугает.
-            </p>
-            <p className="text-secondary">
-              И возвращать себе уверенность — спокойно, без надрыва...
-            </p>
+          
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Image - Left */}
+            <div className="order-2 md:order-1">
+              <img 
+                src="https://cdn.poehali.dev/files/c32eddd7-b598-4255-a78b-d2069594cacb.jpg" 
+                alt="Ты говоришь, что у меня синдром самозванца"
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+            
+            {/* Text - Right */}
+            <div className="space-y-4 text-lg leading-relaxed order-1 md:order-2">
+              <p className="text-secondary">
+                А если синдром самозванца — это не то, что нужно «убить»,
+              </p>
+              <p className="text-secondary">а то, что нужно понять?</p>
+              <p className="text-secondary">
+                Он появляется не потому, что вы плохой специалист,
+              </p>
+              <p className="text-secondary">а потому, что ... это вы узнаете на</p>
+              <p className="text-accent italic font-medium text-center text-xl my-6">интенсиве)</p>
+              <p className="text-secondary">
+                Его невозможно убрать навсегда. Но можно научиться управлять им.
+              </p>
+              <p className="text-secondary">
+                Понимать, когда он говорит правду, а когда просто пугает.
+              </p>
+              <p className="text-secondary">
+                И возвращать себе уверенность — спокойно, без надрыва...
+              </p>
+            </div>
           </div>
         </div>
       </section>
