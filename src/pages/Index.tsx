@@ -405,62 +405,96 @@ const Index = () => {
       </section>
 
       {/* Program Section */}
-      <section className="py-8 md:py-20 px-4 bg-muted scroll-reveal">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-8 md:py-20 px-4 bg-muted scroll-reveal relative overflow-hidden">
+        <div className="container mx-auto max-w-7xl relative z-10">
           <h2 className="text-2xl md:text-4xl font-bold text-primary mb-6 md:mb-12 text-center">
             Что будет на интенсиве
           </h2>
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
-            <Card className="bg-white">
-              <CardContent className="p-4 md:p-6">
-                <div className="flex items-center gap-3 mb-3 md:mb-4">
-                  <div className="bg-accent text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center font-bold text-base md:text-lg">1</div>
-                  <h3 className="text-lg md:text-2xl font-bold text-primary">День 1</h3>
-                </div>
-                <h4 className="text-base md:text-xl font-semibold text-accent mb-2 md:mb-3">
-                  Понять, как работает самозванец
-                </h4>
-                <p className="text-sm md:text-base text-secondary leading-relaxed">
-                  Разберём, с чем люди чаще всего путают синдром самозванца, почему он возникает у сильных специалистов и почему попытки "побороть" его только усиливают внутренний конфликт. Вы познакомитесь с авторской моделью Инны Сороки.
-                </p>
-              </CardContent>
-            </Card>
+          
+          <div className="grid lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
+            <div className="lg:col-span-2 space-y-6 md:space-y-8">
+              <Card className="bg-white border-2 border-accent/20 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <CardContent className="p-4 md:p-6">
+                  <div className="flex items-center gap-3 mb-3 md:mb-4">
+                    <div className="bg-gradient-to-br from-accent to-accent/80 text-white rounded-full w-12 h-12 md:w-14 md:h-14 flex items-center justify-center font-bold text-lg md:text-xl shadow-lg">1</div>
+                    <h3 className="text-xl md:text-3xl font-bold text-primary">День 1</h3>
+                  </div>
+                  <h4 className="text-lg md:text-2xl font-semibold text-accent mb-3 md:mb-4">
+                    Понять, как работает самозванец
+                  </h4>
+                  <p className="text-sm md:text-lg text-secondary leading-relaxed">
+                    Разберём, с чем люди чаще всего путают синдром самозванца, почему он возникает у сильных специалистов и почему попытки "побороть" его только усиливают внутренний конфликт. Вы познакомитесь с авторской моделью Инны Сороки.
+                  </p>
+                </CardContent>
+              </Card>
 
-            <Card className="bg-white">
-              <CardContent className="p-4 md:p-6">
-                <div className="flex items-center gap-3 mb-3 md:mb-4">
-                  <div className="bg-accent text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center font-bold text-base md:text-lg">2</div>
-                  <h3 className="text-lg md:text-2xl font-bold text-primary">День 2</h3>
-                </div>
-                <h4 className="text-base md:text-xl font-semibold text-accent mb-2 md:mb-3">
-                  Вернуться в уверенность и начать действовать
-                </h4>
-                <p className="text-sm md:text-base text-secondary leading-relaxed">
-                  Как действовать спокойно, без надрыва и тревоги. Ответы на вопросы, практики и живые разборы ситуаций участников.
-                </p>
-              </CardContent>
-            </Card>
+              <Card className="bg-white border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <CardContent className="p-4 md:p-6">
+                  <div className="flex items-center gap-3 mb-3 md:mb-4">
+                    <div className="bg-gradient-to-br from-primary to-primary/80 text-white rounded-full w-12 h-12 md:w-14 md:h-14 flex items-center justify-center font-bold text-lg md:text-xl shadow-lg">2</div>
+                    <h3 className="text-xl md:text-3xl font-bold text-primary">День 2</h3>
+                  </div>
+                  <h4 className="text-lg md:text-2xl font-semibold text-accent mb-3 md:mb-4">
+                    Вернуться в уверенность и начать действовать
+                  </h4>
+                  <p className="text-sm md:text-lg text-secondary leading-relaxed">
+                    Как действовать спокойно, без надрыва и тревоги. Ответы на вопросы, практики и живые разборы ситуаций участников.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="hidden lg:block space-y-4">
+              <img 
+                src="https://cdn.poehali.dev/files/13b37e71-149e-4a1c-a03c-72478b4b7ed9.png" 
+                alt="Освобождение от цепей"
+                className="w-full rounded-lg shadow-2xl transform hover:scale-105 transition-all duration-500"
+              />
+              <img 
+                src="https://cdn.poehali.dev/files/f426919e-b204-4373-bf2f-dccf7612ce41.png" 
+                alt="Обретение силы"
+                className="w-full rounded-lg shadow-2xl transform hover:scale-105 transition-all duration-500"
+              />
+            </div>
           </div>
 
-          <div className="bg-gradient-to-r from-accent/10 to-primary/10 p-4 md:p-8 rounded-lg">
-            <h3 className="text-xl md:text-2xl font-bold text-primary mb-4 md:mb-6 text-center">
-              Что вы получите:
-            </h3>
-            <div className="grid md:grid-cols-2 gap-3 md:gap-4">
-              {[
-                'Понять, почему вы чувствовали себя "недостаточно" — и перестанете винить себя',
-                'Узнать, как быстро вернуть внутреннюю опору, когда сомнения накрывают',
-                'Почувствовать уверенность без надуманной мотивации',
-                'Спокойно говорить о своих услугах и поднимать цену без страха'
-              ].map((item, index) => (
-                <div key={index} className="flex gap-3 items-start">
-                  <Icon name="Sparkles" className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-sm md:text-base text-secondary">{item}</p>
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-accent/5 via-primary/5 to-accent/5 blur-3xl"></div>
+            <div className="relative bg-white/80 backdrop-blur-sm border-2 border-accent/30 p-4 md:p-8 rounded-2xl shadow-2xl">
+              <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-center">
+                <div>
+                  <h3 className="text-xl md:text-3xl font-bold text-primary mb-4 md:mb-6 flex items-center gap-3">
+                    <Icon name="Sparkles" className="text-accent" size={32} />
+                    Что вы получите:
+                  </h3>
+                  <div className="space-y-3 md:space-y-4">
+                    {[
+                      'Понять, почему вы чувствовали себя "недостаточно" — и перестанете винить себя',
+                      'Узнать, как быстро вернуть внутреннюю опору, когда сомнения накрывают',
+                      'Почувствовать уверенность без надуманной мотивации',
+                      'Спокойно говорить о своих услугах и поднимать цену без страха'
+                    ].map((item, index) => (
+                      <div key={index} className="flex gap-3 items-start bg-white/60 p-3 rounded-lg">
+                        <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={24} />
+                        <p className="text-sm md:text-lg text-secondary font-medium">{item}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              ))}
+                <div className="hidden lg:block">
+                  <img 
+                    src="https://cdn.poehali.dev/files/180d0101-7310-4182-b1aa-441f1999d439.png" 
+                    alt="Трансформация и освобождение"
+                    className="w-full rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        
+        <div className="absolute top-10 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
       </section>
 
       {/* Authors Section */}
