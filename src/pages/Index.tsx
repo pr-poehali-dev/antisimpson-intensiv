@@ -658,10 +658,10 @@ const Index = () => {
               </form>
               <p className="text-sm text-secondary text-center mt-6">
                 если у вас остались вопросы, или хотите оплатить из-за рубежа, пишите{' '}
-                <a href="tel:+79149324628" className="text-accent font-semibold hover:underline">
-                  +79149324628
+                <a href="tel:+79147043536" className="text-accent font-semibold hover:underline">
+                  +79147043536
                 </a>{' '}
-                менеджер Инна.
+                менеджер Екатерина.
               </p>
             </CardContent>
           </Card>
@@ -673,10 +673,10 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl text-center">
           <p className="mb-4">
             Вопросы? Свяжитесь с нами:{' '}
-            <a href="tel:+79149324628" className="text-accent font-semibold hover:underline">
-              +79149324628
+            <a href="tel:+79147043536" className="text-accent font-semibold hover:underline">
+              +79147043536
             </a>{' '}
-            (менеджер Инна)
+            (менеджер Екатерина)
           </p>
           <p className="text-sm opacity-80">© 2025 Психология как бизнес</p>
         </div>
@@ -684,7 +684,7 @@ const Index = () => {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/79149324628"
+        href="https://wa.me/79147043536"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-4 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 group"
