@@ -200,6 +200,157 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Amplification Section */}
+      <section id="amplification" className="py-20 px-4 bg-muted scroll-reveal">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
+            И что, если с вами всё в порядке?
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="order-2 md:order-1">
+              <img 
+                src="https://cdn.poehali.dev/files/c088feb4-a7b4-4af6-8712-1dd693ee6058.jpeg" 
+                alt="Специалист за работой"
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+            
+            <div className="space-y-4 text-lg leading-relaxed order-1 md:order-2">
+              <p className="text-secondary">
+                Вы снова редактируете пост о себе, откладываете запуск группы, потому что
+              </p>
+              <p className="text-accent italic font-medium bg-white p-4 rounded-lg shadow-sm">
+                Не поднимаете цену, потому что все клиенты разбегутся, кто будет мне платить такие деньги? Решу чуть-чуть и буду готова.
+              </p>
+              <p className="text-secondary">
+                Записываетесь на новое обучение, надеясь, что после него наконец почувствуете уверенность.
+              </p>
+              <p className="text-secondary">
+                Но вместо неё приходит тревога - та самая, которая шепчет:
+              </p>
+              <p className="text-accent italic text-xl font-medium text-center my-6">
+                Ты ещё не достаточна. Подожди. Потом.
+              </p>
+              <p className="text-secondary">
+                И внутри появляется тяжёлая усталость. Не от клиентов. Не от работы.
+              </p>
+              <p className="text-accent italic font-medium text-center text-xl mt-6">
+                А от постоянной борьбы с собой...
+              </p>
+              
+              <div className="mt-8 text-center">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-accent to-accent/80 hover:from-accent/90 hover:to-accent/70 text-white font-bold text-lg px-10 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                  onClick={() => scrollToSection('registration')}
+                >
+                  Пора остановить эту борьбу ⚡
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Understanding Section */}
+      <section id="understanding" className="py-20 px-4 bg-white scroll-reveal">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
+            Почему так?
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-4 text-lg leading-relaxed">
+              <p className="text-secondary">
+                Почти все умные, образованные и честные эксперты через это проходят.
+              </p>
+              <p className="text-secondary">
+                Синдром самозванца - не про слабость.
+              </p>
+              <p className="text-secondary">Это просто показатель того, что вы...</p>
+              <p className="text-accent italic font-medium text-center text-xl my-6">
+                об это как раз интенсив, вы увидите что именно он показывает каждому из нас.
+              </p>
+              <p className="text-secondary">
+                Проблема в том, что когда вы не понимаете, как с ним обращаться,
+              </p>
+              <p className="text-accent font-semibold text-xl text-center my-4">
+                он превращается в тормоз.
+              </p>
+              
+              <div className="mt-8 text-center">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-white font-bold text-lg px-10 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                  onClick={() => scrollToSection('registration')}
+                >
+                  Узнать, как это исправить 🔥
+                </Button>
+              </div>
+            </div>
+            
+            <div>
+              <img 
+                src="https://cdn.poehali.dev/files/dc705272-2e79-4923-b065-6f31b430e1e2.jpg" 
+                alt="Синдром самозванца vs Реальность"
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solution Section */}
+      <section id="solution" className="py-20 px-4 bg-gradient-to-b from-accent/5 to-white scroll-reveal">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
+            А что, если всё иначе?
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="order-2 md:order-1">
+              <img 
+                src="https://cdn.poehali.dev/files/c32eddd7-b598-4255-a78b-d2069594cacb.jpg" 
+                alt="Ты говоришь что у меня синдром самозванца"
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+            
+            <div className="space-y-4 text-lg leading-relaxed order-1 md:order-2">
+              <p className="text-secondary">
+                А если синдром самозванца - это не то, что нужно убить,
+              </p>
+              <p className="text-secondary">а то, что нужно понять?</p>
+              <p className="text-secondary">
+                Он появляется не потому, что вы плохой специалист,
+              </p>
+              <p className="text-secondary">а потому, что ... это вы узнаете на</p>
+              <p className="text-accent italic font-medium text-center text-xl my-6">интенсиве)</p>
+              <p className="text-secondary">
+                Его невозможно убрать навсегда. Но можно научиться управлять им.
+              </p>
+              <p className="text-secondary">
+                Понимать, когда он говорит правду, а когда просто пугает.
+              </p>
+              <p className="text-secondary">
+                И возвращать себе уверенность - спокойно, без надрыва...
+              </p>
+              
+              <div className="mt-8 text-center">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold text-lg px-10 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                  onClick={() => scrollToSection('registration')}
+                >
+                  Я готов узнать больше! ✨
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Registration Section */}
       <section id="registration" className="py-20 px-4 bg-accent/5 scroll-reveal">
         <div className="container mx-auto max-w-2xl">
