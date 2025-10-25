@@ -231,6 +231,14 @@ const Index = () => {
             <p className="text-accent italic font-medium text-center text-xl mt-6">
               А от постоянной борьбы с собой...
             </p>
+            
+            <div className="mt-8">
+              <img 
+                src="https://cdn.poehali.dev/files/c088feb4-a7b4-4af6-8712-1dd693ee6058.jpeg" 
+                alt="Специалист за работой"
+                className="w-full max-w-2xl mx-auto rounded-lg shadow-md"
+              />
+            </div>
           </div>
         </div>
       </section>
