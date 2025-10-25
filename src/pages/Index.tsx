@@ -221,7 +221,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="order-2 md:order-1">
               <img 
-                src="https://cdn.poehali.dev/files/7bb1c092-95bc-42c7-9479-5aa306a61397.png" 
+                src="https://cdn.poehali.dev/files/3a0b53bd-3034-466a-b25f-32aab2f30724.jpg" 
                 alt="Профессиональный эксперт"
                 className="w-full rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl"
               />
