@@ -115,7 +115,11 @@ const Index = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-background to-muted scroll-reveal" style={{ transform: `translateY(${parallaxOffset}px)` }}>
+      <section className="py-20 px-4 bg-gradient-to-b from-background to-muted relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-accent/30 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+        </div>
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="animate-fade-in order-2 md:order-1">
@@ -135,13 +139,17 @@ const Index = () => {
             </div>
 
             <div className="relative animate-fade-in order-1 md:order-2 group">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:rotate-1">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=600&fit=crop" 
-                  alt="Confident professional"
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                  src="https://cdn.poehali.dev/files/b5c4ed63-ee00-451a-ad8f-9a1fc18e9d97.jpg" 
+                  alt="Ксения Леонова"
+                  className="w-full h-auto object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 via-transparent to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-white font-semibold text-lg">Ксения Леонова</p>
+                  <p className="text-white/90 text-sm">Психолог, эксперт по работе с синдромом самозванца</p>
+                </div>
               </div>
             </div>
           </div>
