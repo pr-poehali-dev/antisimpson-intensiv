@@ -83,11 +83,11 @@ const Index = () => {
       <div className="bg-accent text-white py-4 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-            <p className="text-lg font-semibold">До начала интенсива осталось:</p>
-            <div className="flex gap-3 md:gap-6">
+            <p className="text-base md:text-lg font-semibold text-center">До начала интенсива осталось:</p>
+            <div className="flex gap-2 md:gap-6">
               <div className="text-center">
-                <div className="bg-white/20 rounded-lg px-4 py-2 min-w-[70px]">
-                  <p className="text-3xl font-bold">{timeLeft.days}</p>
+                <div className="bg-white/20 rounded-lg px-3 py-2 min-w-[60px] md:min-w-[70px]">
+                  <p className="text-2xl md:text-3xl font-bold">{timeLeft.days}</p>
                   <p className="text-xs opacity-90">дней</p>
                 </div>
               </div>
@@ -115,7 +115,7 @@ const Index = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-background to-muted relative overflow-hidden">
+      <section className="py-12 md:py-20 px-4 bg-gradient-to-b from-background to-muted relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-accent/30 rounded-full blur-3xl animate-float"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
@@ -123,15 +123,15 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="animate-fade-in order-2 md:order-1">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
                 Антисамозванец: как перестать сомневаться в себе и начать действовать
               </h1>
-              <p className="text-lg md:text-xl text-secondary mb-8 leading-relaxed">
+              <p className="text-base md:text-xl text-secondary mb-8 leading-relaxed">
                 Онлайн-интенсив для помогающих специалистов, которые устали чувствовать, что всё время "не дотягивают", и хотят наконец выйти на новый уровень в профессии и доходе.
               </p>
               <Button 
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-white font-semibold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
+                className="bg-accent hover:bg-accent/90 text-white font-semibold text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full shadow-lg hover:shadow-xl transition-all w-full md:w-auto"
                 onClick={() => scrollToSection('registration')}
               >
                 Записаться на интенсив
@@ -155,7 +155,7 @@ const Index = () => {
       </section>
 
       {/* Problem Section */}
-      <section id="intro" className="py-20 px-4 bg-white scroll-reveal">
+      <section id="intro" className="py-12 md:py-20 px-4 bg-white scroll-reveal">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-4 text-lg leading-relaxed">
@@ -187,7 +187,7 @@ const Index = () => {
               <div className="mt-8 text-center">
                 <Button 
                   size="lg" 
-                  className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-10 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 animate-pulse"
+                  className="bg-accent hover:bg-accent/90 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 animate-pulse w-full md:w-auto"
                   onClick={() => scrollToSection('registration')}
                 >
                   Хватит сомневаться - запишитесь сейчас!
@@ -212,7 +212,7 @@ const Index = () => {
       </section>
 
       {/* Amplification Section */}
-      <section id="amplification" className="py-20 px-4 bg-muted scroll-reveal">
+      <section id="amplification" className="py-12 md:py-20 px-4 bg-muted scroll-reveal">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
             И что, если с вами всё в порядке?
@@ -227,11 +227,11 @@ const Index = () => {
               />
             </div>
             
-            <div className="space-y-4 text-lg leading-relaxed order-1 md:order-2">
+            <div className="space-y-4 text-base md:text-lg leading-relaxed order-1 md:order-2">
               <p className="text-secondary">
                 Вы снова редактируете пост о себе, откладываете запуск группы, потому что
               </p>
-              <p className="text-accent italic font-medium bg-white p-4 rounded-lg shadow-sm">
+              <p className="text-accent italic font-medium bg-white p-4 rounded-lg shadow-sm text-sm md:text-base">
                 Не поднимаете цену, потому что все клиенты разбегутся, кто будет мне платить такие деньги? Решу чуть-чуть и буду готова.
               </p>
               <p className="text-secondary">
@@ -240,20 +240,20 @@ const Index = () => {
               <p className="text-secondary">
                 Но вместо неё приходит тревога - та самая, которая шепчет:
               </p>
-              <p className="text-accent italic text-xl font-medium text-center my-6">
+              <p className="text-accent italic text-lg md:text-xl font-medium text-center my-6">
                 Ты ещё не достаточна. Подожди. Потом.
               </p>
               <p className="text-secondary">
                 И внутри появляется тяжёлая усталость. Не от клиентов. Не от работы.
               </p>
-              <p className="text-accent italic font-medium text-center text-xl mt-6">
+              <p className="text-accent italic font-medium text-center text-lg md:text-xl mt-6">
                 А от постоянной борьбы с собой...
               </p>
               
               <div className="mt-8 text-center">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-accent to-accent/80 hover:from-accent/90 hover:to-accent/70 text-white font-bold text-lg px-10 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                  className="bg-gradient-to-r from-accent to-accent/80 hover:from-accent/90 hover:to-accent/70 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 w-full md:w-auto"
                   onClick={() => scrollToSection('registration')}
                 >
                   Пора остановить эту борьбу ⚡
@@ -265,14 +265,14 @@ const Index = () => {
       </section>
 
       {/* Understanding Section */}
-      <section id="understanding" className="py-20 px-4 bg-white scroll-reveal">
+      <section id="understanding" className="py-12 md:py-20 px-4 bg-white scroll-reveal">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
             Почему так?
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-4 text-lg leading-relaxed">
+            <div className="space-y-4 text-base md:text-lg leading-relaxed">
               <p className="text-secondary">
                 Почти все умные, образованные и честные эксперты через это проходят.
               </p>
@@ -280,20 +280,20 @@ const Index = () => {
                 Синдром самозванца - не про слабость.
               </p>
               <p className="text-secondary">Это просто показатель того, что вы...</p>
-              <p className="text-accent italic font-medium text-center text-xl my-6">
+              <p className="text-accent italic font-medium text-center text-lg md:text-xl my-6">
                 об это как раз интенсив, вы увидите что именно он показывает каждому из нас.
               </p>
               <p className="text-secondary">
                 Проблема в том, что когда вы не понимаете, как с ним обращаться,
               </p>
-              <p className="text-accent font-semibold text-xl text-center my-4">
+              <p className="text-accent font-semibold text-lg md:text-xl text-center my-4">
                 он превращается в тормоз.
               </p>
               
               <div className="mt-8 text-center">
                 <Button 
                   size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white font-bold text-lg px-10 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                  className="bg-primary hover:bg-primary/90 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 w-full md:w-auto"
                   onClick={() => scrollToSection('registration')}
                 >
                   Узнать, как это исправить 🔥
@@ -313,7 +313,7 @@ const Index = () => {
       </section>
 
       {/* Solution Section */}
-      <section id="solution" className="py-20 px-4 bg-gradient-to-b from-accent/5 to-white scroll-reveal">
+      <section id="solution" className="py-12 md:py-20 px-4 bg-gradient-to-b from-accent/5 to-white scroll-reveal">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
             А что, если всё иначе?
@@ -333,7 +333,7 @@ const Index = () => {
               />
             </div>
             
-            <div className="space-y-4 text-lg leading-relaxed order-1 md:order-2">
+            <div className="space-y-4 text-base md:text-lg leading-relaxed order-1 md:order-2">
               <p className="text-secondary">
                 А если синдром самозванца - это не то, что нужно убить,
               </p>
@@ -342,7 +342,7 @@ const Index = () => {
                 Он появляется не потому, что вы плохой специалист,
               </p>
               <p className="text-secondary">а потому, что ... это вы узнаете на</p>
-              <p className="text-accent italic font-medium text-center text-xl my-6">интенсиве)</p>
+              <p className="text-accent italic font-medium text-center text-lg md:text-xl my-6">интенсиве)</p>
               <p className="text-secondary">
                 Его невозможно убрать навсегда. Но можно научиться управлять им.
               </p>
@@ -356,7 +356,7 @@ const Index = () => {
               <div className="mt-8 text-center">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold text-lg px-10 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 w-full md:w-auto"
                   onClick={() => scrollToSection('registration')}
                 >
                   Я готов узнать больше! ✨
@@ -368,17 +368,17 @@ const Index = () => {
       </section>
 
       {/* Registration Section */}
-      <section id="registration" className="py-20 px-4 bg-accent/5 scroll-reveal">
+      <section id="registration" className="py-12 md:py-20 px-4 bg-accent/5 scroll-reveal">
         <div className="container mx-auto max-w-2xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 text-center">
+          <h2 className="text-2xl md:text-4xl font-bold text-primary mb-4 text-center">
             Запишитесь на интенсив
           </h2>
-          <p className="text-secondary text-center mb-8">
+          <p className="text-secondary text-center mb-8 text-sm md:text-base">
             Заполните форму, и мы свяжемся с вами для подтверждения регистрации
           </p>
           
           <Card>
-            <CardContent className="p-8">
+            <CardContent className="p-6 md:p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-secondary mb-2">
@@ -419,7 +419,7 @@ const Index = () => {
                   />
                 </div>
                 
-                <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-white">
+                <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-white text-base md:text-lg py-5 md:py-6">
                   Зарегистрироваться
                 </Button>
                 
@@ -459,10 +459,10 @@ const Index = () => {
         href="https://wa.me/79147043536"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 animate-pulse-glow group"
+        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-3 md:p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 animate-pulse-glow group"
         aria-label="Написать в WhatsApp"
       >
-        <Icon name="MessageCircle" size={28} className="group-hover:rotate-12 transition-transform" />
+        <Icon name="MessageCircle" size={24} className="md:w-7 md:h-7 group-hover:rotate-12 transition-transform" />
         <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">1</span>
       </a>
 
