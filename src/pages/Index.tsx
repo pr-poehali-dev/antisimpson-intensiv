@@ -103,23 +103,47 @@ const Index = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-background to-muted py-20 px-4">
-        <div className="container mx-auto max-w-5xl text-center animate-fade-in">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
-            Антисамозванец: как перестать сомневаться в себе и начать действовать
-          </h1>
-          <p className="text-lg md:text-xl text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
-            Двухдневный онлайн-интенсив для психологов, коучей, врачей и других помогающих специалистов, 
-            которые устали чувствовать, что всё время «не дотягивают», и хотят наконец выйти на новый уровень 
-            в профессии и доходе.
-          </p>
-          <Button 
-            size="lg" 
-            className="bg-accent hover:bg-accent/90 text-white font-semibold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
-            onClick={() => scrollToSection('registration')}
-          >
-            Записаться на интенсив
-          </Button>
+      <section className="relative overflow-hidden bg-gradient-to-b from-background to-muted py-12 md:py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Text Content */}
+            <div className="animate-fade-in order-2 md:order-1">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
+                Антисамозванец: как перестать сомневаться в себе и начать действовать
+              </h1>
+              <p className="text-lg md:text-xl text-secondary mb-8 leading-relaxed">
+                Двухдневный онлайн-интенсив для психологов, коучей, врачей и других помогающих специалистов, 
+                которые устали чувствовать, что всё время «не дотягивают», и хотят наконец выйти на новый уровень 
+                в профессии и доходе.
+              </p>
+              <Button 
+                size="lg" 
+                className="bg-accent hover:bg-accent/90 text-white font-semibold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
+                onClick={() => scrollToSection('registration')}
+              >
+                Записаться на интенсив
+              </Button>
+            </div>
+
+            {/* Image with Text Overlay */}
+            <div className="relative animate-fade-in order-1 md:order-2">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://cdn.poehali.dev/files/3adc6dd1-6629-4583-98c4-433d777402e6.png" 
+                  alt="Профессиональный психолог"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute top-8 left-8 right-8">
+                  <div className="inline-block bg-white/95 backdrop-blur-sm px-6 py-4 rounded-lg shadow-xl">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
+                      <span className="text-accent block">АНТИ</span>
+                      <span className="text-primary block">САМОЗВАНЕЦ</span>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
