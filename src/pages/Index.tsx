@@ -192,9 +192,19 @@ const Index = () => {
               <p className="text-accent italic text-xl font-medium text-center my-6">
                 «Это не про меня...»
               </p>
+              
+              <div className="mt-8 text-center">
+                <Button 
+                  size="lg" 
+                  className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-10 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 animate-pulse"
+                  onClick={() => scrollToSection('registration')}
+                >
+                  Хватит сомневаться — запишитесь сейчас!
+                </Button>
+              </div>
             </div>
             
-            {/* Image - Right */}
+            {/* Image - Right */
             <div>
               <img 
                 src="https://cdn.poehali.dev/files/14faf318-1cd2-40b3-a5a3-0d7e0175bebe.png" 
@@ -247,6 +257,16 @@ const Index = () => {
               <p className="text-accent italic font-medium text-center text-xl mt-6">
                 А от постоянной борьбы с собой...
               </p>
+              
+              <div className="mt-8 text-center">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-accent to-accent/80 hover:from-accent/90 hover:to-accent/70 text-white font-bold text-lg px-10 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                  onClick={() => scrollToSection('registration')}
+                >
+                  Пора остановить эту борьбу ⚡
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -278,9 +298,19 @@ const Index = () => {
               <p className="text-accent font-semibold text-xl text-center my-4">
                 он превращается в тормоз.
               </p>
+              
+              <div className="mt-8 text-center">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-white font-bold text-lg px-10 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                  onClick={() => scrollToSection('registration')}
+                >
+                  Узнать, как это исправить 🔥
+                </Button>
+              </div>
             </div>
             
-            {/* Image - Right */}
+            {/* Image - Right */
             <div>
               <img 
                 src="https://cdn.poehali.dev/files/dc705272-2e79-4923-b065-6f31b430e1e2.jpg" 
@@ -329,6 +359,16 @@ const Index = () => {
               <p className="text-secondary">
                 И возвращать себе уверенность — спокойно, без надрыва...
               </p>
+              
+              <div className="mt-8 text-center">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold text-lg px-10 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                  onClick={() => scrollToSection('registration')}
+                >
+                  Я готов узнать больше! ✨
+                </Button>
+              </div>
             </div>
           </div>
         </div>
