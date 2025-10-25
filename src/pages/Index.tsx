@@ -126,15 +126,6 @@ const Index = () => {
               <p className="text-lg md:text-xl text-secondary mb-8 leading-relaxed">
                 Онлайн-интенсив для помогающих специалистов, которые устали чувствовать, что всё время «не дотягивают», и хотят наконец выйти на новый уровень в профессии и доходе.
               </p>
-              
-              <div className="mb-8">
-                <img 
-                  src="https://cdn.poehali.dev/files/dc705272-2e79-4923-b065-6f31b430e1e2.jpg" 
-                  alt="Синдром самозванца vs Реальность"
-                  className="w-full rounded-lg shadow-md"
-                />
-              </div>
-              
               <Button 
                 size="lg" 
                 className="bg-accent hover:bg-accent/90 text-white font-semibold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
@@ -242,6 +233,14 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
             Почему так?
           </h2>
+          
+          <div className="mb-8">
+            <img 
+              src="https://cdn.poehali.dev/files/dc705272-2e79-4923-b065-6f31b430e1e2.jpg" 
+              alt="Синдром самозванца vs Реальность"
+              className="w-full rounded-lg shadow-md"
+            />
+          </div>
           <div className="space-y-4 text-lg leading-relaxed">
             <p className="text-secondary">
               Почти все умные, образованные и честные эксперты через это проходят.
