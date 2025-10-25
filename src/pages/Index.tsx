@@ -195,7 +195,12 @@ const Index = () => {
               </div>
             </div>
             
-            <div>
+            <div className="space-y-6">
+              <img 
+                src="https://cdn.poehali.dev/files/e87e9311-4201-47ce-9e54-a513908bf9de.png" 
+                alt="Профессиональный успех"
+                className="w-full rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+              />
               <img 
                 src="https://cdn.poehali.dev/files/14faf318-1cd2-40b3-a5a3-0d7e0175bebe.png" 
                 alt="Сомнительно но окей"
