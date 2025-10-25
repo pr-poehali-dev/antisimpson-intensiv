@@ -138,18 +138,13 @@ const Index = () => {
               </Button>
             </div>
 
-            <div className="relative animate-fade-in order-1 md:order-2 group">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:rotate-1">
+            <div className="relative animate-fade-in order-1 md:order-2">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl" style={{ transform: `translateY(${parallaxOffset * 0.3}px)` }}>
                 <img 
                   src="https://cdn.poehali.dev/files/6eff48de-9aa2-42ca-a633-a2ac128405c7.png" 
                   alt="Ксения Леонова"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-cover transition-transform duration-700 hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 via-transparent to-transparent"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-white font-semibold text-lg">Ксения Леонова</p>
-                  <p className="text-white/90 text-sm">Психолог, эксперт по работе с синдромом самозванца</p>
-                </div>
               </div>
             </div>
           </div>
