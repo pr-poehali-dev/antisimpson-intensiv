@@ -373,8 +373,8 @@ const Index = () => {
           <h2 className="text-2xl md:text-4xl font-bold text-primary mb-6 md:mb-12 text-center">
             Для кого этот интенсив
           </h2>
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
-            <div className="space-y-4">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 items-start">
+            <div className="space-y-4 md:col-span-2">
               {[
                 'Бесконечно учитесь, но не чувствуете, что стали увереннее',
                 'Всё знаете, но боитесь заявить о себе, чтобы не показаться "выскочкой"',
@@ -387,11 +387,18 @@ const Index = () => {
                   <p className="text-sm md:text-lg text-secondary">{item}</p>
                 </div>
               ))}
+              <div className="bg-accent/10 p-4 md:p-6 rounded-lg mt-6">
+                <p className="text-sm md:text-lg text-secondary italic">
+                  Если внутри вас есть ощущение, что вы способны на большее, но что-то мешает — вы в правильном месте!
+                </p>
+              </div>
             </div>
-            <div className="bg-accent/10 p-4 md:p-6 rounded-lg">
-              <p className="text-sm md:text-lg text-secondary italic">
-                Если внутри вас есть ощущение, что вы способны на большее, но что-то мешает — вы в правильном месте!
-              </p>
+            <div className="order-first md:order-last">
+              <img 
+                src="https://cdn.poehali.dev/files/44ad70db-333a-49d3-9672-2967eca7003c.png" 
+                alt="Уверенная в себе женщина"
+                className="w-full rounded-lg shadow-lg"
+              />
             </div>
           </div>
         </div>
