@@ -138,7 +138,7 @@ const Index = () => {
             </div>
 
             {/* Image with Text Overlay */}
-            <div className="relative animate-fade-in order-1 md:order-2">
+            <div className="relative animate-fade-in order-1 md:order-2 group">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <div 
                   className="relative"
@@ -147,10 +147,10 @@ const Index = () => {
                   <img 
                     src="https://cdn.poehali.dev/files/3adc6dd1-6629-4583-98c4-433d777402e6.png" 
                     alt="Профессиональный психолог"
-                    className="w-full h-auto object-cover transition-transform duration-100"
+                    className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                   />
                 </div>
-                <div className="absolute bottom-8 left-8 right-8">
+                <div className="absolute bottom-8 left-8 right-8 transition-all duration-700 group-hover:bottom-10">
                   <div className="inline-block">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
                       <span className="text-accent block drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">АНТИ</span>
