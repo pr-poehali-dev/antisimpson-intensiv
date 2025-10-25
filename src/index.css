@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,35 +6,35 @@
 
 @layer base {
   :root {
-    --background: 218 33% 97%;
-    --foreground: 218 22% 21%;
+    --background: 0 0% 100%;
+    --foreground: 20 10% 25%;
 
     --card: 0 0% 100%;
-    --card-foreground: 218 22% 21%;
+    --card-foreground: 20 10% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 218 22% 21%;
+    --popover-foreground: 20 10% 25%;
 
-    --primary: 218 22% 21%;
-    --primary-foreground: 218 33% 97%;
+    --primary: 20 10% 25%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 218 17% 29%;
-    --secondary-foreground: 218 33% 97%;
+    --secondary: 20 10% 60%;
+    --secondary-foreground: 20 10% 25%;
 
-    --muted: 218 33% 97%;
-    --muted-foreground: 218 17% 50%;
+    --muted: 30 20% 96%;
+    --muted-foreground: 20 10% 50%;
 
-    --accent: 25 95% 56%;
+    --accent: 14 75% 58%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 218 20% 90%;
-    --input: 218 20% 90%;
-    --ring: 25 95% 56%;
+    --border: 20 10% 90%;
+    --input: 20 10% 90%;
+    --ring: 14 75% 58%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -99,7 +99,13 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Open Sans", sans-serif;
+    font-family:
+      "Inter",
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.01em;
   }
 
   h1,
@@ -108,7 +114,13 @@
   h4,
   h5,
   h6 {
-    font-family: "Montserrat", sans-serif;
+    font-family:
+      "Inter",
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.02em;
   }
 }
 

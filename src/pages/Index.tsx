@@ -78,35 +78,35 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       {/* Countdown Timer */}
-      <div className="bg-accent text-white py-4 px-4">
+      <div className="bg-accent text-white py-6 px-4 border-b border-accent/20">
         <div className="container mx-auto max-w-5xl">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-            <p className="text-base md:text-lg font-semibold text-center">До начала интенсива осталось:</p>
-            <div className="flex gap-2 md:gap-6">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
+            <p className="text-sm md:text-base font-light tracking-wide">До начала интенсива осталось</p>
+            <div className="flex gap-4 md:gap-8">
               <div className="text-center">
-                <div className="bg-white/20 rounded-lg px-3 py-2 min-w-[60px] md:min-w-[70px]">
-                  <p className="text-2xl md:text-3xl font-bold">{timeLeft.days}</p>
-                  <p className="text-xs opacity-90">дней</p>
+                <div className="bg-white/10 backdrop-blur-sm rounded px-4 py-3 min-w-[60px] border border-white/20">
+                  <p className="text-3xl md:text-4xl font-light tabular-nums">{timeLeft.days}</p>
+                  <p className="text-xs font-light opacity-80 mt-1">дней</p>
                 </div>
               </div>
               <div className="text-center">
-                <div className="bg-white/20 rounded-lg px-4 py-2 min-w-[70px]">
-                  <p className="text-3xl font-bold">{timeLeft.hours}</p>
-                  <p className="text-xs opacity-90">часов</p>
+                <div className="bg-white/10 backdrop-blur-sm rounded px-4 py-3 min-w-[60px] border border-white/20">
+                  <p className="text-3xl md:text-4xl font-light tabular-nums">{timeLeft.hours}</p>
+                  <p className="text-xs font-light opacity-80 mt-1">часов</p>
                 </div>
               </div>
               <div className="text-center">
-                <div className="bg-white/20 rounded-lg px-4 py-2 min-w-[70px]">
-                  <p className="text-3xl font-bold">{timeLeft.minutes}</p>
-                  <p className="text-xs opacity-90">минут</p>
+                <div className="bg-white/10 backdrop-blur-sm rounded px-4 py-3 min-w-[60px] border border-white/20">
+                  <p className="text-3xl md:text-4xl font-light tabular-nums">{timeLeft.minutes}</p>
+                  <p className="text-xs font-light opacity-80 mt-1">минут</p>
                 </div>
               </div>
               <div className="text-center">
-                <div className="bg-white/20 rounded-lg px-4 py-2 min-w-[70px]">
-                  <p className="text-3xl font-bold">{timeLeft.seconds}</p>
-                  <p className="text-xs opacity-90">секунд</p>
+                <div className="bg-white/10 backdrop-blur-sm rounded px-4 py-3 min-w-[60px] border border-white/20">
+                  <p className="text-3xl md:text-4xl font-light tabular-nums">{timeLeft.seconds}</p>
+                  <p className="text-xs font-light opacity-80 mt-1">секунд</p>
                 </div>
               </div>
             </div>
@@ -115,38 +115,34 @@ const Index = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="py-8 md:py-20 px-4 bg-gradient-to-b from-background to-muted relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 hidden md:block">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-accent/30 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
-        </div>
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
-            <div className="animate-fade-in order-2 md:order-1">
-              <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 md:mb-6 leading-tight">
+      <section className="py-16 md:py-32 px-6 md:px-12">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div className="animate-fade-in order-2 md:order-1 space-y-8">
+              <h1 className="text-3xl md:text-6xl font-light text-primary leading-[1.15] tracking-tight">
                 Антисамозванец: как перестать сомневаться в себе и начать действовать
               </h1>
-              <p className="text-sm md:text-xl text-secondary mb-6 md:mb-8 leading-relaxed">
+              <p className="text-base md:text-lg text-secondary font-light leading-relaxed">
                 Онлайн-интенсив для помогающих специалистов, которые устали чувствовать, что всё время "не дотягивают", и хотят наконец выйти на новый уровень в профессии и доходе.
               </p>
               <Button 
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-white font-semibold text-sm md:text-lg px-6 md:px-8 py-4 md:py-6 rounded-full shadow-lg hover:shadow-xl transition-all w-full md:w-auto"
+                className="bg-accent hover:bg-accent/90 text-white font-normal text-base px-10 py-6 rounded transition-all border-0"
                 onClick={() => scrollToSection('registration')}
               >
                 Записаться на интенсив
               </Button>
             </div>
 
-            <div className="relative animate-fade-in order-1 md:order-2 mb-4 md:mb-0">
+            <div className="relative animate-fade-in order-1 md:order-2">
               <div 
-                className="relative overflow-hidden rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl transition-transform duration-100 will-change-transform" 
-                style={{ transform: `translateY(${-parallaxOffset * 0.15}px) scale(${1 + parallaxOffset * 0.00005})` }}
+                className="relative overflow-hidden rounded transition-transform duration-100 will-change-transform" 
+                style={{ transform: `translateY(${-parallaxOffset * 0.1}px)` }}
               >
                 <img 
                   src="https://cdn.poehali.dev/files/6eff48de-9aa2-42ca-a633-a2ac128405c7.png" 
                   alt="Ксения Леонова"
-                  className="w-full h-auto object-cover transition-all duration-500 ease-out md:hover:scale-110"
+                  className="w-full h-auto object-cover"
                 />
               </div>
             </div>
@@ -155,39 +151,40 @@ const Index = () => {
       </section>
 
       {/* Problem Section */}
-      <section id="intro" className="py-8 md:py-20 px-4 bg-white scroll-reveal">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
-            <div className="space-y-4 text-lg leading-relaxed">
-              <p className="text-secondary">Вас благодарят клиенты.</p>
-              <p className="text-secondary">Коллеги говорят, что вы классный специалист.</p>
-              <p className="text-secondary">
+      <section id="intro" className="py-16 md:py-32 px-6 md:px-12 bg-muted scroll-reveal">
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+            <div className="space-y-6 text-base md:text-lg font-light leading-relaxed">
+              <p className="text-primary">Вас благодарят клиенты.</p>
+              <p className="text-primary">Коллеги говорят, что вы классный специалист.</p>
+              <p className="text-primary">
                 К вам приходят по рекомендации, вы постоянно учитесь, стараетесь, вкладываетесь.
               </p>
-              <p className="text-secondary">И вроде бы всё хорошо.</p>
-              <p className="text-secondary mt-8">
+              <p className="text-primary">И вроде бы всё хорошо.</p>
+              <div className="h-12"></div>
+              <p className="text-primary">
                 Но внутри всё равно время от времени подкрадывается это чувство - будто вы не до конца настоящий профессионал.
               </p>
-              <div className="bg-accent/10 border-l-4 border-accent p-4 md:p-6 my-4 md:my-6">
-                <p className="text-primary font-semibold">Как будто просто повезло.</p>
-                <p className="text-primary font-semibold mt-2">
+              <div className="border-l border-accent pl-6 py-4 my-8 space-y-3">
+                <p className="text-primary">Как будто просто повезло.</p>
+                <p className="text-primary">
                   Как будто всё держится не на вас, а на удаче или хороших клиентах.
                 </p>
               </div>
-              <p className="text-secondary">
+              <p className="text-primary">
                 И когда кто-то говорит: Вы такой крутой эксперт, внутри что-то сжимается.
               </p>
-              <p className="text-secondary">
+              <p className="text-primary">
                 Хочется улыбнуться и сказать спасибо, но в голове крутится:
               </p>
-              <p className="text-accent italic text-xl font-medium text-center my-6">
+              <p className="text-accent text-2xl font-light text-center my-12">
                 Это не про меня...
               </p>
               
-              <div className="mt-8 text-center">
+              <div className="mt-12 text-center">
                 <Button 
                   size="lg" 
-                  className="bg-accent hover:bg-accent/90 text-white font-bold text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 animate-pulse w-full md:w-auto"
+                  className="bg-accent hover:bg-accent/90 text-white font-normal text-base px-10 py-6 rounded transition-all"
                   onClick={() => scrollToSection('registration')}
                 >
                   Записаться сейчас
@@ -195,16 +192,16 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="space-y-4 md:space-y-6">
+            <div className="space-y-8">
               <img 
                 src="https://cdn.poehali.dev/files/e87e9311-4201-47ce-9e54-a513908bf9de.png" 
                 alt="Профессиональный успех"
-                className="w-full rounded-lg shadow-lg transition-all duration-500 md:hover:scale-105 md:hover:shadow-2xl"
+                className="w-full rounded"
               />
               <img 
                 src="https://cdn.poehali.dev/files/14faf318-1cd2-40b3-a5a3-0d7e0175bebe.png" 
                 alt="Сомнительно но окей"
-                className="w-full rounded-lg shadow-lg"
+                className="w-full rounded"
               />
             </div>
           </div>
@@ -212,332 +209,140 @@ const Index = () => {
       </section>
 
       {/* Amplification Section */}
-      <section id="amplification" className="py-8 md:py-20 px-4 bg-muted scroll-reveal">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-4xl font-bold text-primary mb-6 md:mb-12 text-center">
+      <section id="amplification" className="py-16 md:py-32 px-6 md:px-12 bg-white scroll-reveal">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-2xl md:text-4xl font-light text-primary mb-16 text-center tracking-tight">
             И что, если с вами всё в порядке?
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
             <div className="order-2 md:order-1">
               <img 
                 src="https://cdn.poehali.dev/files/3a0b53bd-3034-466a-b25f-32aab2f30724.jpg" 
                 alt="Профессиональный эксперт"
-                className="w-full rounded-lg shadow-lg transition-all duration-500 md:hover:scale-105 md:hover:shadow-2xl"
+                className="w-full rounded"
               />
             </div>
             
-            <div className="space-y-3 md:space-y-4 text-sm md:text-lg leading-relaxed order-1 md:order-2">
-              <p className="text-secondary">
+            <div className="space-y-6 text-base md:text-lg font-light leading-relaxed order-1 md:order-2">
+              <p className="text-primary">
                 Вы снова редактируете пост о себе, откладываете запуск группы, потому что
               </p>
-              <p className="text-accent italic font-medium bg-white p-3 md:p-4 rounded-lg shadow-sm text-xs md:text-base">
+              <p className="text-accent bg-muted p-6 rounded">
                 Не поднимаете цену, потому что все клиенты разбегутся, кто будет мне платить такие деньги? Решу чуть-чуть и буду готова.
               </p>
-              <p className="text-secondary">
+              <p className="text-primary">
                 Записываетесь на новое обучение, надеясь, что после него наконец почувствуете уверенность.
               </p>
-              <p className="text-secondary">
+              <p className="text-primary">
                 Но вместо неё приходит тревога - та самая, которая шепчет:
               </p>
-              <p className="text-accent italic text-sm md:text-xl font-medium text-center my-3 md:my-6">
+              <p className="text-accent text-2xl font-light text-center my-12">
                 Ты ещё не достаточна. Подожди. Потом.
               </p>
-              <p className="text-secondary">
+              <p className="text-primary">
                 И внутри появляется тяжёлая усталость. Не от клиентов. Не от работы.
               </p>
-              <p className="text-accent italic font-medium text-center text-sm md:text-xl mt-4 md:mt-6">
-                А от постоянной борьбы с собой...
+              <p className="text-accent text-center text-xl mt-8">
+                От постоянного доказывания себе, что вы имеете право занимать своё место.
               </p>
-              
-              <div className="mt-6 md:mt-8 text-center">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-accent to-accent/80 hover:from-accent/90 hover:to-accent/70 text-white font-bold text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 w-full md:w-auto"
-                  onClick={() => scrollToSection('registration')}
-                >
-                  Остановить борьбу
-                </Button>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Understanding Section */}
-      <section id="understanding" className="py-8 md:py-20 px-4 bg-white scroll-reveal">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-4xl font-bold text-primary mb-6 md:mb-12 text-center">
-            Почему так?
+      {/* What Happens Section */}
+      <section id="what-happens" className="py-16 md:py-32 px-6 md:px-12 bg-muted scroll-reveal">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-2xl md:text-4xl font-light text-primary mb-16 text-center tracking-tight">
+            Что происходит на самом деле
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
-            <div className="space-y-3 md:space-y-4 text-sm md:text-lg leading-relaxed">
-              <p className="text-secondary">
-                Почти все умные, образованные и честные эксперты через это проходят.
+          <div className="space-y-8 max-w-3xl mx-auto">
+            <Card className="bg-white border-0 rounded">
+              <CardContent className="p-8">
+                <p className="text-base md:text-lg font-light leading-relaxed text-primary">
+                  Вы не плохой специалист. И вам не нужен ещё один курс, чтобы это доказать.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white border-0 rounded">
+              <CardContent className="p-8">
+                <p className="text-base md:text-lg font-light leading-relaxed text-primary">
+                  С вами не что-то не так. У вас просто синдром самозванца - знакомый каждому второму хорошему специалисту.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white border-0 rounded">
+              <CardContent className="p-8">
+                <p className="text-base md:text-lg font-light leading-relaxed text-primary">
+                  Он не о компетентности. Он о внутренней опоре. О том, разрешаете ли вы себе быть видимой. Повышать цены. Не прятаться. Занимать своё место.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <div className="text-center pt-8">
+              <p className="text-accent text-xl md:text-2xl font-light leading-relaxed">
+                И именно это мы разберём на интенсиве Антисамозванец
               </p>
-              <p className="text-secondary">
-                Синдром самозванца - не про слабость.
-              </p>
-              <p className="text-secondary">Это просто показатель того, что вы...</p>
-              <p className="text-accent italic font-medium text-center text-sm md:text-xl my-3 md:my-6">
-                об это как раз интенсив, вы увидите что именно он показывает каждому из нас.
-              </p>
-              <p className="text-secondary">
-                Проблема в том, что когда вы не понимаете, как с ним обращаться,
-              </p>
-              <p className="text-accent font-semibold text-sm md:text-xl text-center my-3 md:my-4">
-                он превращается в тормоз.
-              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Results Section */}
+      <section id="results" className="py-16 md:py-32 px-6 md:px-12 bg-white scroll-reveal">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-2xl md:text-4xl font-light text-primary mb-16 text-center tracking-tight">
+            Что вы получите на интенсиве
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div className="space-y-8">
+              <div className="border-l border-accent pl-6 space-y-3">
+                <h3 className="text-lg md:text-xl font-normal text-primary">Узнаете, откуда берётся синдром самозванца</h3>
+                <p className="text-base font-light text-secondary leading-relaxed">
+                  Почему даже крутые специалисты постоянно сомневаются в себе, и как разорвать эту связь раз и навсегда.
+                </p>
+              </div>
               
-              <div className="mt-8 text-center">
-                <Button 
-                  size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white font-bold text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 w-full md:w-auto"
-                  onClick={() => scrollToSection('registration')}
-                >
-                  Узнать больше
-                </Button>
+              <div className="border-l border-accent pl-6 space-y-3">
+                <h3 className="text-lg md:text-xl font-normal text-primary">Найдёте свои точки опоры</h3>
+                <p className="text-base font-light text-secondary leading-relaxed">
+                  Научитесь опираться на себя вместо того, чтобы постоянно искать подтверждение извне. Перестанете ждать разрешения действовать.
+                </p>
+              </div>
+              
+              <div className="border-l border-accent pl-6 space-y-3">
+                <h3 className="text-lg md:text-xl font-normal text-primary">Разрешите себе расти</h3>
+                <p className="text-base font-light text-secondary leading-relaxed">
+                  Поднять цены. Взять сложного клиента. Запустить новый формат. Выйти с экспертностью. Перестанете себя сдерживать.
+                </p>
+              </div>
+              
+              <div className="border-l border-accent pl-6 space-y-3">
+                <h3 className="text-lg md:text-xl font-normal text-primary">Начнёте чувствовать уверенность</h3>
+                <p className="text-base font-light text-secondary leading-relaxed">
+                  Не когда-то потом. Не после следующего курса. А прямо сейчас - в своей практике, в своей цене, в себе.
+                </p>
               </div>
             </div>
             
             <div>
               <img 
-                src="https://cdn.poehali.dev/files/2912cd2e-5715-497f-a70e-57e6db3ef98a.jpg" 
-                alt="Синдром самозванца vs Реальность"
-                className="w-full rounded-lg shadow-lg transition-all duration-500 md:hover:scale-105 md:hover:shadow-2xl"
+                src="https://cdn.poehali.dev/files/3a0b53bd-3034-466a-b25f-32aab2f30724.jpg" 
+                alt="Результаты интенсива"
+                className="w-full rounded"
               />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Solution Section */}
-      <section id="solution" className="py-8 md:py-20 px-4 bg-gradient-to-b from-accent/5 to-white scroll-reveal">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-4xl font-bold text-primary mb-6 md:mb-12 text-center">
-            А что, если всё иначе?
-          </h2>
           
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
-            <div className="order-2 md:order-1 space-y-4 md:space-y-6">
-              <img 
-                src="https://cdn.poehali.dev/files/cfbfbeb4-2b90-423e-a214-c29044fed484.jpg" 
-                alt="О синдроме самозванца"
-                className="w-full rounded-lg shadow-lg transition-all duration-500 md:hover:scale-105 md:hover:shadow-2xl"
-              />
-              <img 
-                src="https://cdn.poehali.dev/files/c32eddd7-b598-4255-a78b-d2069594cacb.jpg" 
-                alt="Ты говоришь что у меня синдром самозванца"
-                className="w-full rounded-lg shadow-lg"
-              />
-            </div>
-            
-            <div className="space-y-3 md:space-y-4 text-sm md:text-lg leading-relaxed order-1 md:order-2">
-              <p className="text-secondary">
-                А если синдром самозванца - это не то, что нужно убить,
-              </p>
-              <p className="text-secondary">а то, что нужно понять?</p>
-              <p className="text-secondary">
-                Он появляется не потому, что вы плохой специалист,
-              </p>
-              <p className="text-secondary">а потому, что ... это вы узнаете на</p>
-              <p className="text-accent italic font-medium text-center text-sm md:text-xl my-3 md:my-6">интенсиве)</p>
-              <p className="text-secondary">
-                Его невозможно убрать навсегда. Но можно научиться управлять им.
-              </p>
-              <p className="text-secondary">
-                Понимать, когда он говорит правду, а когда просто пугает.
-              </p>
-              <p className="text-secondary">
-                И возвращать себе уверенность - спокойно, без надрыва...
-              </p>
-              
-              <div className="mt-6 md:mt-8 text-center">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 w-full md:w-auto"
-                  onClick={() => scrollToSection('registration')}
-                >
-                  Узнать больше
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Target Audience Section */}
-      <section className="py-8 md:py-20 px-4 bg-white scroll-reveal">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-4xl font-bold text-primary mb-6 md:mb-12 text-center">
-            Для кого этот интенсив
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 items-start">
-            <div className="space-y-4 md:col-span-2">
-              {[
-                'Бесконечно учитесь, но не чувствуете, что стали увереннее',
-                'Всё знаете, но боитесь заявить о себе, чтобы не показаться "выскочкой"',
-                'Постоянно сравниваете себя с другими и чувствуете, что "всё ещё не готовы"',
-                'Не можете спокойно говорить о цене и чувствуете стыд за деньги',
-                'Устали ждать момента, когда "наконец поверите в себя"'
-              ].map((item, index) => (
-                <div key={index} className="flex gap-3 items-start">
-                  <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={20} />
-                  <p className="text-sm md:text-lg text-secondary">{item}</p>
-                </div>
-              ))}
-              <div className="bg-accent/10 p-4 md:p-6 rounded-lg mt-6">
-                <p className="text-sm md:text-lg text-secondary italic">
-                  Если внутри вас есть ощущение, что вы способны на большее, но что-то мешает — вы в правильном месте!
-                </p>
-              </div>
-              <div className="mt-6 text-center">
-                <Button 
-                  size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white font-bold text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 w-full md:w-auto"
-                  onClick={() => scrollToSection('registration')}
-                >
-                  Записаться на интенсив
-                </Button>
-              </div>
-            </div>
-            <div className="order-first md:order-last">
-              <img 
-                src="https://cdn.poehali.dev/files/44ad70db-333a-49d3-9672-2967eca7003c.png" 
-                alt="Уверенная в себе женщина"
-                className="w-full rounded-lg shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Program Section */}
-      <section className="py-8 md:py-20 px-4 bg-muted scroll-reveal relative overflow-hidden">
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <h2 className="text-2xl md:text-4xl font-bold text-primary mb-6 md:mb-12 text-center">
-            Что будет на интенсиве
-          </h2>
-          
-          <div className="grid lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
-            <div className="lg:col-span-2 space-y-6 md:space-y-8">
-              <Card className="bg-white border-2 border-accent/20 shadow-xl hover:shadow-2xl transition-all duration-300">
-                <CardContent className="p-4 md:p-6">
-                  <div className="flex items-center gap-3 mb-3 md:mb-4">
-                    <div className="bg-gradient-to-br from-accent to-accent/80 text-white rounded-full w-12 h-12 md:w-14 md:h-14 flex items-center justify-center font-bold text-lg md:text-xl shadow-lg">1</div>
-                    <h3 className="text-xl md:text-3xl font-bold text-primary">День 1</h3>
-                  </div>
-                  <h4 className="text-lg md:text-2xl font-semibold text-accent mb-3 md:mb-4">
-                    Понять, как работает самозванец
-                  </h4>
-                  <p className="text-sm md:text-lg text-secondary leading-relaxed">
-                    Разберём, с чем люди чаще всего путают синдром самозванца, почему он возникает у сильных специалистов и почему попытки "побороть" его только усиливают внутренний конфликт. Вы познакомитесь с авторской моделью Инны Сороки.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white border-2 border-primary/20 shadow-xl hover:shadow-2xl transition-all duration-300">
-                <CardContent className="p-4 md:p-6">
-                  <div className="flex items-center gap-3 mb-3 md:mb-4">
-                    <div className="bg-gradient-to-br from-primary to-primary/80 text-white rounded-full w-12 h-12 md:w-14 md:h-14 flex items-center justify-center font-bold text-lg md:text-xl shadow-lg">2</div>
-                    <h3 className="text-xl md:text-3xl font-bold text-primary">День 2</h3>
-                  </div>
-                  <h4 className="text-lg md:text-2xl font-semibold text-accent mb-3 md:mb-4">
-                    Вернуться в уверенность и начать действовать
-                  </h4>
-                  <p className="text-sm md:text-lg text-secondary leading-relaxed">
-                    Как действовать спокойно, без надрыва и тревоги. Ответы на вопросы, практики и живые разборы ситуаций участников.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <div className="bg-gradient-to-br from-accent/20 via-accent/10 to-transparent border-2 border-accent/40 rounded-2xl p-4 md:p-6 shadow-2xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-3 md:mb-4">
-                    <Icon name="Gift" className="text-accent" size={32} />
-                    <h3 className="text-xl md:text-2xl font-bold text-primary">+ Бонус для участников</h3>
-                  </div>
-                  <p className="text-sm md:text-lg text-secondary leading-relaxed mb-3 md:mb-4">
-                    Всем участникам интенсива — доступ к закрытому чату поддержки на 30 дней. Вы сможете задавать вопросы, получать помощь и поддержку от экспертов и других участников в процессе применения практик в реальной жизни.
-                  </p>
-                  <div className="bg-white/80 backdrop-blur-sm rounded-lg p-3 md:p-4 border-l-4 border-accent">
-                    <p className="text-accent font-bold text-sm md:text-base">
-                      Это не просто знания — это реальная поддержка на пути к уверенности!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <img 
-                src="https://cdn.poehali.dev/files/13b37e71-149e-4a1c-a03c-72478b4b7ed9.png" 
-                alt="Освобождение от цепей"
-                className="w-full rounded-lg shadow-2xl md:hover:scale-105 transition-all duration-500"
-              />
-              <img 
-                src="https://cdn.poehali.dev/files/f426919e-b204-4373-bf2f-dccf7612ce41.png" 
-                alt="Обретение силы"
-                className="w-full rounded-lg shadow-2xl hidden lg:block md:hover:scale-105 transition-all duration-500"
-              />
-            </div>
-          </div>
-
-          <div className="relative mt-8 md:mt-12">
-            <div className="absolute inset-0 bg-gradient-to-r from-accent/5 via-primary/5 to-accent/5 blur-3xl"></div>
-            <div className="relative bg-white/80 backdrop-blur-sm border-2 border-accent/30 p-4 md:p-8 rounded-2xl shadow-2xl">
-              <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-center">
-                <div>
-                  <h3 className="text-xl md:text-3xl font-bold text-primary mb-4 md:mb-6 flex items-center gap-3">
-                    <Icon name="Sparkles" className="text-accent" size={32} />
-                    Что вы получите:
-                  </h3>
-                  <div className="space-y-3 md:space-y-4">
-                    {[
-                      'Понять, почему вы чувствовали себя "недостаточно" — и перестанете винить себя',
-                      'Узнать, как быстро вернуть внутреннюю опору, когда сомнения накрывают',
-                      'Почувствовать уверенность без надуманной мотивации',
-                      'Спокойно говорить о своих услугах и поднимать цену без страха'
-                    ].map((item, index) => (
-                      <div key={index} className="flex gap-3 items-start bg-white/60 p-3 rounded-lg">
-                        <Icon name="CheckCircle2" className="text-accent flex-shrink-0 mt-1" size={24} />
-                        <p className="text-sm md:text-lg text-secondary font-medium">{item}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <img 
-                    src="https://cdn.poehali.dev/files/180d0101-7310-4182-b1aa-441f1999d439.png" 
-                    alt="Трансформация и освобождение"
-                    className="w-full rounded-2xl shadow-2xl md:hover:scale-105 transition-all duration-500"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="absolute top-10 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-      </section>
-
-      {/* Project Section */}
-      <section className="py-8 md:py-20 px-4 bg-white scroll-reveal">
-        <div className="container mx-auto max-w-4xl">
-          <div className="bg-gradient-to-br from-primary/10 to-accent/10 p-6 md:p-12 rounded-2xl text-center shadow-xl">
-            <h3 className="text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-6">
-              Психология как бизнес
-            </h3>
-            <p className="text-base md:text-xl text-secondary max-w-3xl mx-auto leading-relaxed mb-6 md:mb-8">
-              Проект, где специалисты учатся не просто помогать людям, а строить устойчивую систему дохода на том, что умеют и любят.
-            </p>
+          <div className="mt-16 text-center">
             <Button 
               size="lg" 
-              className="bg-accent hover:bg-accent/90 text-white font-bold text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+              className="bg-accent hover:bg-accent/90 text-white font-normal text-base px-10 py-6 rounded transition-all"
               onClick={() => scrollToSection('registration')}
             >
               Присоединиться к интенсиву
@@ -547,229 +352,273 @@ const Index = () => {
       </section>
 
       {/* Format and Price Section */}
-      <section className="py-8 md:py-20 px-4 bg-gradient-to-b from-accent/5 to-white scroll-reveal">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-4xl font-bold text-primary mb-6 md:mb-12 text-center">
+      <section className="py-16 md:py-32 px-6 md:px-12 bg-muted scroll-reveal">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-2xl md:text-4xl font-light text-primary mb-16 text-center tracking-tight">
             Формат и стоимость
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
-            <Card className="bg-white">
-              <CardContent className="p-4 md:p-6">
-                <h3 className="text-xl md:text-2xl font-bold text-primary mb-4 md:mb-6">Детали интенсива</h3>
-                <div className="space-y-3 md:space-y-4">
-                  <div className="flex gap-3 items-start">
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <Card className="bg-white border-0 rounded">
+              <CardContent className="p-8">
+                <h3 className="text-xl md:text-2xl font-normal text-primary mb-8">Детали интенсива</h3>
+                <div className="space-y-6">
+                  <div className="flex gap-4 items-start">
                     <Icon name="Calendar" className="text-accent flex-shrink-0 mt-1" size={20} />
                     <div>
-                      <p className="font-semibold text-sm md:text-base text-primary">Даты</p>
-                      <p className="text-sm md:text-base text-secondary">11 и 14 ноября в 19:00 мск</p>
+                      <p className="font-normal text-primary mb-1">Даты</p>
+                      <p className="text-sm font-light text-secondary">11 и 14 ноября в 19:00 мск</p>
                     </div>
                   </div>
-                  <div className="flex gap-3 items-start">
+                  <div className="flex gap-4 items-start">
                     <Icon name="Clock" className="text-accent flex-shrink-0 mt-1" size={20} />
                     <div>
-                      <p className="font-semibold text-sm md:text-base text-primary">Длительность</p>
-                      <p className="text-sm md:text-base text-secondary">2 дня по 3 часа</p>
+                      <p className="font-normal text-primary mb-1">Длительность</p>
+                      <p className="text-sm font-light text-secondary">2 встречи по 2 часа</p>
                     </div>
                   </div>
-                  <div className="flex gap-3 items-start">
+                  <div className="flex gap-4 items-start">
                     <Icon name="Video" className="text-accent flex-shrink-0 mt-1" size={20} />
                     <div>
-                      <p className="font-semibold text-sm md:text-base text-primary">Формат</p>
-                      <p className="text-sm md:text-base text-secondary">Онлайн, с записями и чат-поддержкой</p>
+                      <p className="font-normal text-primary mb-1">Формат</p>
+                      <p className="text-sm font-light text-secondary">Онлайн в Zoom с записью</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 items-start">
+                    <Icon name="Users" className="text-accent flex-shrink-0 mt-1" size={20} />
+                    <div>
+                      <p className="font-normal text-primary mb-1">Участники</p>
+                      <p className="text-sm font-light text-secondary">До 15 человек для глубокой работы</p>
                     </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
-
-            <Card className="bg-gradient-to-br from-accent to-accent/80 text-white">
-              <CardContent className="p-4 md:p-6 flex flex-col justify-center items-center text-center h-full">
-                <p className="text-sm md:text-lg mb-2 md:mb-3 opacity-90">Стоимость участия</p>
-                <p className="text-4xl md:text-6xl font-bold mb-3 md:mb-4">5 800 ₽</p>
-                <Button 
-                  size="lg"
-                  className="bg-white text-accent hover:bg-white/90 font-bold text-sm md:text-lg px-6 md:px-8 py-4 md:py-6 w-full md:w-auto"
-                  onClick={() => scrollToSection('registration')}
-                >
-                  Записаться сейчас
-                </Button>
+            
+            <Card className="bg-white border-0 rounded">
+              <CardContent className="p-8">
+                <h3 className="text-xl md:text-2xl font-normal text-primary mb-8">Что входит</h3>
+                <div className="space-y-4">
+                  <div className="flex gap-4 items-start">
+                    <Icon name="Check" className="text-accent flex-shrink-0 mt-1" size={20} />
+                    <p className="text-sm font-light text-secondary">2 живые встречи с разборами</p>
+                  </div>
+                  <div className="flex gap-4 items-start">
+                    <Icon name="Check" className="text-accent flex-shrink-0 mt-1" size={20} />
+                    <p className="text-sm font-light text-secondary">Запись всех встреч</p>
+                  </div>
+                  <div className="flex gap-4 items-start">
+                    <Icon name="Check" className="text-accent flex-shrink-0 mt-1" size={20} />
+                    <p className="text-sm font-light text-secondary">Практические упражнения</p>
+                  </div>
+                  <div className="flex gap-4 items-start">
+                    <Icon name="Check" className="text-accent flex-shrink-0 mt-1" size={20} />
+                    <p className="text-sm font-light text-secondary">Рабочая тетрадь</p>
+                  </div>
+                  <div className="flex gap-4 items-start">
+                    <Icon name="Check" className="text-accent flex-shrink-0 mt-1" size={20} />
+                    <p className="text-sm font-light text-secondary">Чат поддержки участников</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
+          
+          <Card className="bg-white border-0 rounded max-w-2xl mx-auto">
+            <CardContent className="p-8 text-center">
+              <p className="text-sm font-light text-secondary mb-2">Стоимость участия</p>
+              <p className="text-4xl md:text-5xl font-light text-primary mb-2">7 900 ₽</p>
+              <p className="text-sm font-light text-accent">
+                Ранняя цена до 1 ноября - 5 900 ₽
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
 
-          <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg">
-            <h3 className="text-xl md:text-2xl font-bold text-primary mb-4 md:mb-6 text-center">
-              Бонусы при регистрации
-            </h3>
-            <div className="grid md:grid-cols-3 gap-4 md:gap-6">
-              {[
-                {
-                  icon: 'BookOpen',
-                  title: 'Тетрадь с практиками',
-                  description: 'Упражнения "Антисамозванец"'
-                },
-                {
-                  icon: 'ListChecks',
-                  title: 'Чек-лист',
-                  description: '"Мои опоры"'
-                },
-                {
-                  icon: 'Headphones',
-                  title: 'Аудиопрактика',
-                  description: 'Возвращение в состояние спокойной уверенности'
-                }
-              ].map((bonus, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-accent/10 rounded-full w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mx-auto mb-3">
-                    <Icon name={bonus.icon} className="text-accent" size={28} />
-                  </div>
-                  <h4 className="font-semibold text-sm md:text-base text-primary mb-1 md:mb-2">{bonus.title}</h4>
-                  <p className="text-xs md:text-sm text-secondary">{bonus.description}</p>
+      {/* Author Section */}
+      <section id="author" className="py-16 md:py-32 px-6 md:px-12 bg-white scroll-reveal">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-2xl md:text-4xl font-light text-primary mb-16 text-center tracking-tight">
+            Ведущая интенсива
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+            <div>
+              <img 
+                src="https://cdn.poehali.dev/files/6eff48de-9aa2-42ca-a633-a2ac128405c7.png" 
+                alt="Ксения Леонова"
+                className="w-full rounded"
+              />
+            </div>
+            
+            <div className="space-y-6">
+              <h3 className="text-2xl md:text-3xl font-normal text-primary">Ксения Леонова</h3>
+              <p className="text-base md:text-lg font-light text-secondary leading-relaxed">
+                Психолог, коуч, супервизор. Работаю с помогающими специалистами уже более 10 лет.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex gap-4 items-start">
+                  <Icon name="Check" className="text-accent flex-shrink-0 mt-1" size={20} />
+                  <p className="text-sm font-light text-secondary">
+                    Сертифицированный психолог, коуч ICF, супервизор
+                  </p>
                 </div>
-              ))}
+                <div className="flex gap-4 items-start">
+                  <Icon name="Check" className="text-accent flex-shrink-0 mt-1" size={20} />
+                  <p className="text-sm font-light text-secondary">
+                    Провела более 5000 часов индивидуальных сессий
+                  </p>
+                </div>
+                <div className="flex gap-4 items-start">
+                  <Icon name="Check" className="text-accent flex-shrink-0 mt-1" size={20} />
+                  <p className="text-sm font-light text-secondary">
+                    Автор программ для специалистов помогающих профессий
+                  </p>
+                </div>
+                <div className="flex gap-4 items-start">
+                  <Icon name="Check" className="text-accent flex-shrink-0 mt-1" size={20} />
+                  <p className="text-sm font-light text-secondary">
+                    Помогла сотням специалистов преодолеть синдром самозванца
+                  </p>
+                </div>
+              </div>
+              
+              <p className="text-base font-light text-primary leading-relaxed pt-4 border-t border-border">
+                Я точно знаю, что синдром самозванца - это не про недостаток знаний или опыта. 
+                Это про разрешение быть собой и занимать своё место. И я помогу вам это разрешение себе дать.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Registration Section */}
-      <section id="registration" className="py-8 md:py-20 px-4 bg-accent/5 scroll-reveal">
-        <div className="container mx-auto max-w-2xl">
-          <h2 className="text-2xl md:text-4xl font-bold text-primary mb-4 text-center">
-            Записаться на интенсив "Антисамозванец"
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 md:py-32 px-6 md:px-12 bg-muted scroll-reveal">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-2xl md:text-4xl font-light text-primary mb-16 text-center tracking-tight">
+            Частые вопросы
           </h2>
-          <p className="text-secondary text-center mb-8 text-sm md:text-base">
-            Заполните форму, и мы свяжемся с вами для подтверждения регистрации
+          
+          <div className="space-y-6">
+            <Card className="bg-white border-0 rounded">
+              <CardContent className="p-8">
+                <h3 className="text-lg font-normal text-primary mb-3">Мне подойдёт этот интенсив?</h3>
+                <p className="text-base font-light text-secondary leading-relaxed">
+                  Да, если вы помогающий специалист (психолог, коуч, терапевт, наставник) и чувствуете, 
+                  что синдром самозванца мешает вам развиваться профессионально и повышать доход.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white border-0 rounded">
+              <CardContent className="p-8">
+                <h3 className="text-lg font-normal text-primary mb-3">Что если я не смогу прийти на встречу?</h3>
+                <p className="text-base font-light text-secondary leading-relaxed">
+                  Все встречи записываются. Вы сможете посмотреть их в любое удобное время.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white border-0 rounded">
+              <CardContent className="p-8">
+                <h3 className="text-lg font-normal text-primary mb-3">Как проходит оплата?</h3>
+                <p className="text-base font-light text-secondary leading-relaxed">
+                  После регистрации вы получите ссылку на оплату. Принимаем карты и СБП.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white border-0 rounded">
+              <CardContent className="p-8">
+                <h3 className="text-lg font-normal text-primary mb-3">Можно ли вернуть деньги?</h3>
+                <p className="text-base font-light text-secondary leading-relaxed">
+                  Да, если вы передумали участвовать до начала первой встречи, мы вернём полную стоимость.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Registration Section */}
+      <section id="registration" className="py-16 md:py-32 px-6 md:px-12 bg-white scroll-reveal">
+        <div className="container mx-auto max-w-2xl">
+          <h2 className="text-2xl md:text-4xl font-light text-primary mb-4 text-center tracking-tight">
+            Записаться на интенсив
+          </h2>
+          <p className="text-center text-accent font-light mb-12">
+            Осталось 7 мест по ранней цене
           </p>
           
-          <Card>
-            <CardContent className="p-6 md:p-8">
+          <Card className="bg-muted border-0 rounded">
+            <CardContent className="p-8 md:p-12">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-secondary mb-2">
-                    Имя
-                  </label>
+                  <label className="block text-sm font-light text-primary mb-2">Ваше имя</label>
                   <Input
                     type="text"
-                    required
                     value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Ваше имя"
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    className="w-full bg-white border-border rounded font-light"
+                    required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-secondary mb-2">
-                    Email
-                  </label>
+                  <label className="block text-sm font-light text-primary mb-2">Email</label>
                   <Input
                     type="email"
-                    required
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="your@email.com"
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    className="w-full bg-white border-border rounded font-light"
+                    required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-secondary mb-2">
-                    Телефон
-                  </label>
+                  <label className="block text-sm font-light text-primary mb-2">Телефон</label>
                   <Input
                     type="tel"
-                    required
                     value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="+7 (999) 123-45-67"
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    className="w-full bg-white border-border rounded font-light"
+                    required
                   />
                 </div>
                 
-                <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-white text-base md:text-lg py-5 md:py-6">
+                <Button 
+                  type="submit"
+                  size="lg"
+                  className="w-full bg-accent hover:bg-accent/90 text-white font-normal text-base py-6 rounded transition-all"
+                >
                   Зарегистрироваться
                 </Button>
                 
-                <div className="flex items-center gap-4 mt-6 pt-6 border-t">
-                  <Icon name="Phone" className="text-accent" size={24} />
-                  <div>
-                    <p className="text-sm text-secondary">Есть вопросы? Звоните:</p>
-                    <a href="tel:+79147043536" className="text-lg font-semibold text-primary hover:text-accent transition-colors">
-                      +7 914 704-35-36
-                    </a>
-                    <p className="text-sm text-secondary">Менеджер: Екатерина</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-4 pt-4">
-                  <Icon name="MessageCircle" className="text-green-600" size={24} />
-                  <div>
-                    <p className="text-sm text-secondary">Или напишите в WhatsApp:</p>
-                    <a 
-                      href="https://wa.me/79147043536" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-lg font-semibold text-green-600 hover:text-green-700 transition-colors"
-                    >
-                      Написать в WhatsApp
-                    </a>
-                  </div>
-                </div>
+                <p className="text-xs font-light text-secondary text-center">
+                  Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+                </p>
               </form>
             </CardContent>
           </Card>
         </div>
       </section>
 
-      {/* Final Quote Section */}
-      <section className="py-8 md:py-16 px-4 bg-gradient-to-b from-primary/5 to-accent/5 scroll-reveal">
-        <div className="container mx-auto max-w-4xl text-center">
-          <Icon name="Sparkles" className="text-accent mx-auto mb-4 md:mb-6" size={48} />
-          <p className="text-lg md:text-2xl text-primary italic leading-relaxed mb-6 md:mb-8">
-            Возможно, именно эти два дня станут для вас поворотной точкой. Вы перестанете сравнивать себя с другими и начнёте действовать — спокойно, уверенно и по-настоящему.
-          </p>
-          <Button 
-            size="lg" 
-            className="bg-gradient-to-r from-accent to-primary hover:from-accent/90 hover:to-primary/90 text-white font-bold text-base md:text-xl px-8 md:px-12 py-5 md:py-7 rounded-full shadow-2xl hover:shadow-3xl transition-all hover:scale-110 animate-pulse"
-            onClick={() => scrollToSection('registration')}
-          >
-            Записаться прямо сейчас ✨
-          </Button>
-        </div>
-      </section>
-
-      {/* WhatsApp Floating Button */}
-      <a
-        href="https://wa.me/79147043536"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-3 md:p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 animate-pulse-glow group"
-        aria-label="Написать в WhatsApp"
-      >
-        <Icon name="MessageCircle" size={24} className="md:w-7 md:h-7 group-hover:rotate-12 transition-transform" />
-        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">1</span>
-      </a>
-
       {/* Footer */}
-      <footer className="py-8 px-4 bg-primary text-white">
-        <div className="container mx-auto max-w-6xl text-center">
-          <p className="text-sm opacity-80">
-            &copy; 2025 Антисамозванец. Все права защищены.
-          </p>
-          <div className="mt-4 flex justify-center gap-4 text-sm">
-            <a href="tel:+79147043536" className="hover:text-accent transition-colors">
-              +7 914 704-35-36
-            </a>
-            <span className="opacity-50">|</span>
-            <a 
-              href="https://wa.me/79147043536" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:text-accent transition-colors"
-            >
-              WhatsApp
-            </a>
+      <footer className="py-12 px-6 bg-muted border-t border-border">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center space-y-4">
+            <p className="text-sm font-light text-secondary">© 2025 Ксения Леонова. Все права защищены.</p>
+            <div className="flex justify-center gap-6">
+              <a href="#" className="text-sm font-light text-secondary hover:text-accent transition-colors">
+                Политика конфиденциальности
+              </a>
+              <a href="#" className="text-sm font-light text-secondary hover:text-accent transition-colors">
+                Публичная оферта
+              </a>
+            </div>
           </div>
-          <p className="text-xs opacity-60 mt-2">Менеджер: Екатерина</p>
         </div>
       </footer>
     </div>
