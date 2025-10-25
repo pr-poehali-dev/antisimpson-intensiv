@@ -497,37 +497,14 @@ const Index = () => {
         <div className="absolute bottom-10 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
       </section>
 
-      {/* Authors Section */}
+      {/* Project Section */}
       <section className="py-8 md:py-20 px-4 bg-white scroll-reveal">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-4xl font-bold text-primary mb-6 md:mb-12 text-center">
-            Авторы и ведущие
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
-            <Card>
-              <CardContent className="p-4 md:p-6">
-                <h3 className="text-xl md:text-2xl font-bold text-primary mb-2">Инна Сорока</h3>
-                <p className="text-sm md:text-base text-secondary leading-relaxed">
-                  Клинический психолог, супервизор. Помогает экспертам вернуть уверенность и устойчивость в профессии.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-4 md:p-6">
-                <h3 className="text-xl md:text-2xl font-bold text-primary mb-2">Марина Шульгина</h3>
-                <p className="text-sm md:text-base text-secondary leading-relaxed">
-                  Маркетолог, помогает психологам выстраивать систему клиентов и расти без выгорания.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="bg-primary/5 p-4 md:p-8 rounded-lg text-center">
-            <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="bg-gradient-to-br from-primary/10 to-accent/10 p-6 md:p-12 rounded-2xl text-center shadow-xl">
+            <h3 className="text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-6">
               Психология как бизнес
             </h3>
-            <p className="text-sm md:text-lg text-secondary max-w-3xl mx-auto">
+            <p className="text-base md:text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
               Проект, где специалисты учатся не просто помогать людям, а строить устойчивую систему дохода на том, что умеют и любят.
             </p>
           </div>
@@ -681,10 +658,10 @@ const Index = () => {
                   <Icon name="Phone" className="text-accent" size={24} />
                   <div>
                     <p className="text-sm text-secondary">Есть вопросы? Звоните:</p>
-                    <a href="tel:+79149324628" className="text-lg font-semibold text-primary hover:text-accent transition-colors">
-                      +7 914 932-46-28
+                    <a href="tel:+79147043536" className="text-lg font-semibold text-primary hover:text-accent transition-colors">
+                      +7 914 704-35-36
                     </a>
-                    <p className="text-sm text-secondary">Менеджер: Яна</p>
+                    <p className="text-sm text-secondary">Менеджер: Екатерина</p>
                   </div>
                 </div>
                 
@@ -693,7 +670,7 @@ const Index = () => {
                   <div>
                     <p className="text-sm text-secondary">Или напишите в WhatsApp:</p>
                     <a 
-                      href="https://wa.me/79149324628" 
+                      href="https://wa.me/79147043536" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-lg font-semibold text-green-600 hover:text-green-700 transition-colors"
@@ -720,7 +697,7 @@ const Index = () => {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/79149324628"
+        href="https://wa.me/79147043536"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-3 md:p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 animate-pulse-glow group"
