@@ -18,6 +18,8 @@ const Index = () => {
     seconds: 0
   });
 
+  const [parallaxOffset, setParallaxOffset] = useState(0);
+
   useEffect(() => {
     const targetDate = new Date('2025-10-17T19:00:00+03:00').getTime();
 
@@ -54,6 +56,16 @@ const Index = () => {
 
     document.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el));
     return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      setParallaxOffset(scrolled * 0.5);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -128,16 +140,21 @@ const Index = () => {
             {/* Image with Text Overlay */}
             <div className="relative animate-fade-in order-1 md:order-2">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="https://cdn.poehali.dev/files/3adc6dd1-6629-4583-98c4-433d777402e6.png" 
-                  alt="Профессиональный психолог"
-                  className="w-full h-auto object-cover"
-                />
-                <div className="absolute top-8 left-8 right-8">
-                  <div className="inline-block bg-white/95 backdrop-blur-sm px-6 py-4 rounded-lg shadow-xl">
+                <div 
+                  className="relative"
+                  style={{ transform: `translateY(${parallaxOffset}px)` }}
+                >
+                  <img 
+                    src="https://cdn.poehali.dev/files/3adc6dd1-6629-4583-98c4-433d777402e6.png" 
+                    alt="Профессиональный психолог"
+                    className="w-full h-auto object-cover transition-transform duration-100"
+                  />
+                </div>
+                <div className="absolute bottom-8 left-8 right-8">
+                  <div className="inline-block">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
-                      <span className="text-accent block">АНТИ</span>
-                      <span className="text-primary block">САМОЗВАНЕЦ</span>
+                      <span className="text-accent block drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">АНТИ</span>
+                      <span className="text-primary block drop-shadow-[0_2px_8px_rgba(255,255,255,0.8)]">САМОЗВАНЕЦ</span>
                     </h2>
                   </div>
                 </div>
