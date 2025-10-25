@@ -303,9 +303,9 @@ const Index = () => {
             
             <div>
               <img 
-                src="https://cdn.poehali.dev/files/dc705272-2e79-4923-b065-6f31b430e1e2.jpg" 
-                alt="Синдром самозванца vs Реальность"
-                className="w-full rounded-lg shadow-lg"
+                src="https://cdn.poehali.dev/files/e014bebd-4e7e-444b-b138-cb89ddd22aeb.jpeg" 
+                alt="Специалист за работой"
+                className="w-full rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl"
               />
             </div>
           </div>
