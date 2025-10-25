@@ -204,40 +204,45 @@ const Index = () => {
 
       {/* Amplification Section */}
       <section id="amplification" className="py-20 px-4 bg-muted scroll-reveal">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
             И что, если с вами всё в порядке?
           </h2>
-          <div className="space-y-4 text-lg leading-relaxed">
-            <p className="text-secondary">
-              Вы снова редактируете пост о себе, откладываете запуск группы, потому что
-            </p>
-            <p className="text-accent italic font-medium bg-white p-4 rounded-lg shadow-sm">
-              Не поднимаете цену, потому что все клиенты разбегутся, кто будет мне платить такие деньги? 
-              «Решу чуть-чуть и буду готова».
-            </p>
-            <p className="text-secondary">
-              Записываетесь на новое обучение, надеясь, что после него наконец почувствуете уверенность.
-            </p>
-            <p className="text-secondary">
-              Но вместо неё приходит тревога — та самая, которая шепчет:
-            </p>
-            <p className="text-accent italic text-xl font-medium text-center my-6">
-              «Ты ещё не достаточна. Подожди. Потом.»
-            </p>
-            <p className="text-secondary">
-              И внутри появляется тяжёлая усталость. Не от клиентов. Не от работы.
-            </p>
-            <p className="text-accent italic font-medium text-center text-xl mt-6">
-              А от постоянной борьбы с собой...
-            </p>
-            
-            <div className="mt-8">
+          
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Image - Left */}
+            <div className="order-2 md:order-1">
               <img 
                 src="https://cdn.poehali.dev/files/c088feb4-a7b4-4af6-8712-1dd693ee6058.jpeg" 
                 alt="Специалист за работой"
-                className="w-full max-w-2xl mx-auto rounded-lg shadow-md"
+                className="w-full rounded-lg shadow-lg"
               />
+            </div>
+            
+            {/* Text - Right */}
+            <div className="space-y-4 text-lg leading-relaxed order-1 md:order-2">
+              <p className="text-secondary">
+                Вы снова редактируете пост о себе, откладываете запуск группы, потому что
+              </p>
+              <p className="text-accent italic font-medium bg-white p-4 rounded-lg shadow-sm">
+                Не поднимаете цену, потому что все клиенты разбегутся, кто будет мне платить такие деньги? 
+                «Решу чуть-чуть и буду готова».
+              </p>
+              <p className="text-secondary">
+                Записываетесь на новое обучение, надеясь, что после него наконец почувствуете уверенность.
+              </p>
+              <p className="text-secondary">
+                Но вместо неё приходит тревога — та самая, которая шепчет:
+              </p>
+              <p className="text-accent italic text-xl font-medium text-center my-6">
+                «Ты ещё не достаточна. Подожди. Потом.»
+              </p>
+              <p className="text-secondary">
+                И внутри появляется тяжёлая усталость. Не от клиентов. Не от работы.
+              </p>
+              <p className="text-accent italic font-medium text-center text-xl mt-6">
+                А от постоянной борьбы с собой...
+              </p>
             </div>
           </div>
         </div>
