@@ -164,38 +164,42 @@ const Index = () => {
 
       {/* Problem Section */}
       <section id="intro" className="py-20 px-4 bg-white scroll-reveal">
-        <div className="container mx-auto max-w-4xl">
-          <div className="space-y-4 text-lg leading-relaxed">
-            <p className="text-secondary">Вас благодарят клиенты.</p>
-            <p className="text-secondary">Коллеги говорят, что вы классный специалист.</p>
-            <p className="text-secondary">
-              К вам приходят по рекомендации, вы постоянно учитесь, стараетесь, вкладываетесь.
-            </p>
-            <p className="text-secondary">И вроде бы всё хорошо.</p>
-            <p className="text-secondary mt-8">
-              Но внутри всё равно время от времени подкрадывается это чувство — будто вы не до конца настоящий профессионал.
-            </p>
-            <div className="bg-accent/10 border-l-4 border-accent p-6 my-6">
-              <p className="text-primary font-semibold">Как будто просто повезло.</p>
-              <p className="text-primary font-semibold mt-2">
-                Как будто всё держится не на вас, а на удаче или «хороших клиентах».
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Text - Left */}
+            <div className="space-y-4 text-lg leading-relaxed">
+              <p className="text-secondary">Вас благодарят клиенты.</p>
+              <p className="text-secondary">Коллеги говорят, что вы классный специалист.</p>
+              <p className="text-secondary">
+                К вам приходят по рекомендации, вы постоянно учитесь, стараетесь, вкладываетесь.
+              </p>
+              <p className="text-secondary">И вроде бы всё хорошо.</p>
+              <p className="text-secondary mt-8">
+                Но внутри всё равно время от времени подкрадывается это чувство — будто вы не до конца настоящий профессионал.
+              </p>
+              <div className="bg-accent/10 border-l-4 border-accent p-6 my-6">
+                <p className="text-primary font-semibold">Как будто просто повезло.</p>
+                <p className="text-primary font-semibold mt-2">
+                  Как будто всё держится не на вас, а на удаче или «хороших клиентах».
+                </p>
+              </div>
+              <p className="text-secondary">
+                И когда кто-то говорит: «Вы такой крутой эксперт», внутри что-то сжимается.
+              </p>
+              <p className="text-secondary">
+                Хочется улыбнуться и сказать спасибо, но в голове крутится:
+              </p>
+              <p className="text-accent italic text-xl font-medium text-center my-6">
+                «Это не про меня...»
               </p>
             </div>
-            <p className="text-secondary">
-              И когда кто-то говорит: «Вы такой крутой эксперт», внутри что-то сжимается.
-            </p>
-            <p className="text-secondary">
-              Хочется улыбнуться и сказать спасибо, но в голове крутится:
-            </p>
-            <p className="text-accent italic text-xl font-medium text-center my-6">
-              «Это не про меня...»
-            </p>
             
-            <div className="mt-8">
+            {/* Image - Right */}
+            <div>
               <img 
                 src="https://cdn.poehali.dev/files/14faf318-1cd2-40b3-a5a3-0d7e0175bebe.png" 
                 alt="Сомнительно, но окей"
-                className="w-full max-w-2xl mx-auto rounded-lg shadow-md"
+                className="w-full rounded-lg shadow-lg"
               />
             </div>
           </div>
@@ -250,35 +254,40 @@ const Index = () => {
 
       {/* Understanding Section */}
       <section id="understanding" className="py-20 px-4 bg-white scroll-reveal">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
             Почему так?
           </h2>
           
-          <div className="mb-8">
-            <img 
-              src="https://cdn.poehali.dev/files/dc705272-2e79-4923-b065-6f31b430e1e2.jpg" 
-              alt="Синдром самозванца vs Реальность"
-              className="w-full rounded-lg shadow-md"
-            />
-          </div>
-          <div className="space-y-4 text-lg leading-relaxed">
-            <p className="text-secondary">
-              Почти все умные, образованные и честные эксперты через это проходят.
-            </p>
-            <p className="text-secondary">
-              Синдром самозванца — не про слабость.
-            </p>
-            <p className="text-secondary">Это просто показатель того, что вы...</p>
-            <p className="text-accent italic font-medium text-center text-xl my-6">
-              об это как раз интенсив, вы увидите что именно он показывает каждому из нас.
-            </p>
-            <p className="text-secondary">
-              Проблема в том, что когда вы не понимаете, как с ним обращаться,
-            </p>
-            <p className="text-accent font-semibold text-xl text-center my-4">
-              он превращается в тормоз.
-            </p>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Text - Left */}
+            <div className="space-y-4 text-lg leading-relaxed">
+              <p className="text-secondary">
+                Почти все умные, образованные и честные эксперты через это проходят.
+              </p>
+              <p className="text-secondary">
+                Синдром самозванца — не про слабость.
+              </p>
+              <p className="text-secondary">Это просто показатель того, что вы...</p>
+              <p className="text-accent italic font-medium text-center text-xl my-6">
+                об это как раз интенсив, вы увидите что именно он показывает каждому из нас.
+              </p>
+              <p className="text-secondary">
+                Проблема в том, что когда вы не понимаете, как с ним обращаться,
+              </p>
+              <p className="text-accent font-semibold text-xl text-center my-4">
+                он превращается в тормоз.
+              </p>
+            </div>
+            
+            {/* Image - Right */}
+            <div>
+              <img 
+                src="https://cdn.poehali.dev/files/dc705272-2e79-4923-b065-6f31b430e1e2.jpg" 
+                alt="Синдром самозванца vs Реальность"
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
