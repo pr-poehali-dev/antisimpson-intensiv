@@ -216,9 +216,9 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="order-2 md:order-1">
               <img 
-                src="https://cdn.poehali.dev/files/c088feb4-a7b4-4af6-8712-1dd693ee6058.jpeg" 
-                alt="Специалист за работой"
-                className="w-full rounded-lg shadow-lg"
+                src="https://cdn.poehali.dev/files/7bb1c092-95bc-42c7-9479-5aa306a61397.png" 
+                alt="Профессиональный эксперт"
+                className="w-full rounded-lg shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl"
               />
             </div>
             
@@ -443,6 +443,18 @@ const Index = () => {
           </Card>
         </div>
       </section>
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/79147043536"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 animate-pulse-glow group"
+        aria-label="Написать в WhatsApp"
+      >
+        <Icon name="MessageCircle" size={28} className="group-hover:rotate-12 transition-transform" />
+        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">1</span>
+      </a>
 
       {/* Footer */}
       <footer className="py-8 px-4 bg-primary text-white">
