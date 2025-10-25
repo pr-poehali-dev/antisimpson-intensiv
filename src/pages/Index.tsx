@@ -392,6 +392,15 @@ const Index = () => {
                   Если внутри вас есть ощущение, что вы способны на большее, но что-то мешает — вы в правильном месте!
                 </p>
               </div>
+              <div className="mt-6 text-center">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-white font-bold text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105 w-full md:w-auto"
+                  onClick={() => scrollToSection('registration')}
+                >
+                  Записаться на интенсив
+                </Button>
+              </div>
             </div>
             <div className="order-first md:order-last">
               <img 
@@ -504,9 +513,16 @@ const Index = () => {
             <h3 className="text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-6">
               Психология как бизнес
             </h3>
-            <p className="text-base md:text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base md:text-xl text-secondary max-w-3xl mx-auto leading-relaxed mb-6 md:mb-8">
               Проект, где специалисты учатся не просто помогать людям, а строить устойчивую систему дохода на том, что умеют и любят.
             </p>
+            <Button 
+              size="lg" 
+              className="bg-accent hover:bg-accent/90 text-white font-bold text-sm md:text-lg px-6 md:px-10 py-4 md:py-6 rounded-full shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+              onClick={() => scrollToSection('registration')}
+            >
+              Присоединиться к интенсиву
+            </Button>
           </div>
         </div>
       </section>
@@ -689,9 +705,16 @@ const Index = () => {
       <section className="py-8 md:py-16 px-4 bg-gradient-to-b from-primary/5 to-accent/5 scroll-reveal">
         <div className="container mx-auto max-w-4xl text-center">
           <Icon name="Sparkles" className="text-accent mx-auto mb-4 md:mb-6" size={48} />
-          <p className="text-lg md:text-2xl text-primary italic leading-relaxed">
+          <p className="text-lg md:text-2xl text-primary italic leading-relaxed mb-6 md:mb-8">
             Возможно, именно эти два дня станут для вас поворотной точкой. Вы перестанете сравнивать себя с другими и начнёте действовать — спокойно, уверенно и по-настоящему.
           </p>
+          <Button 
+            size="lg" 
+            className="bg-gradient-to-r from-accent to-primary hover:from-accent/90 hover:to-primary/90 text-white font-bold text-base md:text-xl px-8 md:px-12 py-5 md:py-7 rounded-full shadow-2xl hover:shadow-3xl transition-all hover:scale-110 animate-pulse"
+            onClick={() => scrollToSection('registration')}
+          >
+            Записаться прямо сейчас ✨
+          </Button>
         </div>
       </section>
 
