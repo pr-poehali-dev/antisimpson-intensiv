@@ -78,7 +78,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       {/* Countdown Timer */}
       <div className="bg-accent text-white py-6 px-4 border-b border-accent/20">
         <div className="container mx-auto max-w-5xl">
@@ -115,7 +115,7 @@ const Index = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="py-16 md:py-32 px-6 md:px-12 bg-white">
+      <section className="py-16 md:py-32 px-6 md:px-12">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="animate-fade-in order-2 md:order-1 space-y-8">
@@ -151,7 +151,7 @@ const Index = () => {
       </section>
 
       {/* Problem Section */}
-      <section id="intro" className="py-16 md:py-32 px-6 md:px-12 bg-white scroll-reveal">
+      <section id="intro" className="py-16 md:py-32 px-6 md:px-12 bg-muted scroll-reveal">
         <div className="container mx-auto max-w-5xl">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
             <div className="space-y-6 text-base md:text-lg font-light leading-relaxed">
@@ -209,7 +209,7 @@ const Index = () => {
       </section>
 
       {/* Amplification Section */}
-      <section id="amplification" className="py-16 md:py-32 px-6 md:px-12 bg-muted scroll-reveal">
+      <section id="amplification" className="py-16 md:py-32 px-6 md:px-12 bg-white scroll-reveal">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-2xl md:text-4xl font-light text-primary mb-16 text-center tracking-tight">
             И что, если с вами всё в порядке?
@@ -252,7 +252,7 @@ const Index = () => {
       </section>
 
       {/* What Happens Section */}
-      <section id="what-happens" className="py-16 md:py-32 px-6 md:px-12 bg-white scroll-reveal">
+      <section id="what-happens" className="py-16 md:py-32 px-6 md:px-12 bg-muted scroll-reveal">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-2xl md:text-4xl font-light text-primary mb-16 text-center tracking-tight">
             Что происходит на самом деле
@@ -293,7 +293,7 @@ const Index = () => {
       </section>
 
       {/* Results Section */}
-      <section id="results" className="py-16 md:py-32 px-6 md:px-12 bg-muted scroll-reveal">
+      <section id="results" className="py-16 md:py-32 px-6 md:px-12 bg-white scroll-reveal">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-2xl md:text-4xl font-light text-primary mb-16 text-center tracking-tight">
             Что вы получите на интенсиве
