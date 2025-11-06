@@ -3,6 +3,7 @@ import os
 import urllib.request
 import urllib.parse
 from typing import Dict, Any
+from datetime import datetime, timezone
 
 def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     '''
@@ -63,13 +64,15 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         email = body_data.get('email', 'Не указано')
         phone = body_data.get('phone', 'Не указано')
         
+        now = datetime.now(timezone.utc).strftime('%d.%m.%Y %H:%M:%S UTC')
+        
         message = f"""🔔 Новая заявка на интенсив!
 
 👤 Имя: {name}
 📧 Email: {email}
 📱 Телефон: {phone}
 
-Время: {context.request_id}"""
+⏰ Время: {now}"""
     
     telegram_url = f'https://api.telegram.org/bot{bot_token}/sendMessage'
     
