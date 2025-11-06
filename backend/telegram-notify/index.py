@@ -43,11 +43,27 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         }
     
     body_data = json.loads(event.get('body', '{}'))
-    name = body_data.get('name', 'Не указано')
-    email = body_data.get('email', 'Не указано')
-    phone = body_data.get('phone', 'Не указано')
     
-    message = f"""🔔 Новая заявка на интенсив!
+    notification_type = body_data.get('type', 'registration')
+    
+    if notification_type == 'payment_success':
+        invoice_id = body_data.get('invoiceId', 'Не указано')
+        amount = body_data.get('amount', 'Не указано')
+        timestamp = body_data.get('timestamp', 'Не указано')
+        
+        message = f"""💰 Оплата успешно получена!
+
+🧾 Номер заказа: {invoice_id}
+💵 Сумма: {amount} руб.
+⏰ Время: {timestamp}
+
+✅ Участник успешно зарегистрирован на интенсив!"""
+    else:
+        name = body_data.get('name', 'Не указано')
+        email = body_data.get('email', 'Не указано')
+        phone = body_data.get('phone', 'Не указано')
+        
+        message = f"""🔔 Новая заявка на интенсив!
 
 👤 Имя: {name}
 📧 Email: {email}
