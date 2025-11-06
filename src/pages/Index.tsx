@@ -81,8 +81,8 @@ const Index = () => {
       });
 
       if (response.ok) {
-        alert('Спасибо за регистрацию! Мы свяжемся с вами в ближайшее время.');
         setFormData({ name: '', email: '', phone: '' });
+        window.location.href = 'https://auth.robokassa.ru/merchant/Invoice/cjHfd_P6LU6_OCymscMURA';
       } else {
         alert('Произошла ошибка. Пожалуйста, попробуйте еще раз.');
       }
