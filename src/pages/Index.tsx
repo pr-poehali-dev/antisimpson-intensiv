@@ -68,9 +68,27 @@ const Index = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Спасибо за регистрацию! Мы свяжемся с вами в ближайшее время.');
+    
+    try {
+      const response = await fetch('https://functions.poehali.dev/392adbef-ec19-4693-a6ac-d8ad00c822c0', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Спасибо за регистрацию! Мы свяжемся с вами в ближайшее время.');
+        setFormData({ name: '', email: '', phone: '' });
+      } else {
+        alert('Произошла ошибка. Пожалуйста, попробуйте еще раз.');
+      }
+    } catch (error) {
+      alert('Произошла ошибка. Пожалуйста, попробуйте еще раз.');
+    }
   };
 
   const scrollToSection = (id: string) => {
